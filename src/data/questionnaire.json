@@ -1,0 +1,309 @@
+{
+  "version": "1.4",
+  "titre": "Enneagrammez-vous : questionnaire maison",
+  "source": "Inspiré de F. et P. Chabreuil, « L'ennéagramme, dynamique de connaissance et d'évolution » (9edce.pdf) : fiertés des types (p. 17), compulsions d'évitement (p. 18-19), confusions entre types (p. 61-64).",
+  "consigne": "Pour chaque affirmation, indique à quelle fréquence elle te correspond. Pense à la personne que tu es vraiment depuis longtemps, pas à celle que tu aimerais être.",
+  "echelle": [
+    {
+      "valeur": 0,
+      "libelle": "Pas du tout"
+    },
+    {
+      "valeur": 1,
+      "libelle": "Quelques fois"
+    },
+    {
+      "valeur": 2,
+      "libelle": "Neutre"
+    },
+    {
+      "valeur": 3,
+      "libelle": "Souvent"
+    },
+    {
+      "valeur": 4,
+      "libelle": "Toujours"
+    }
+  ],
+  "types": {
+    "1": {
+      "nom": "Le Perfectionniste",
+      "fierte-evitement": "Tu es fier·e de ta capacité de travail, de ton honnêteté et de ta rigueur morale. Ce que tu cherches avant tout à éviter, c'est la colère, la tienne comme celle des autres. Pour cela, tu t'efforces de faire parfaitement ce qui doit être fait. Mais comme rien n'est jamais tout à fait à la hauteur de tes exigences, une irritation s'installe, que tu gardes souvent pour toi.",
+      "passion": "Colère",
+      "centre": "instinctif"
+    },
+    "2": {
+      "nom": "L'Altruiste",
+      "fierte-evitement": "Tu es fier·e de l'amour et de l'aide chaleureuse que tu apportes aux autres. Ce que tu cherches avant tout à éviter, c'est de reconnaître tes propres besoins. Tu te tournes spontanément vers ceux des autres, exprimés ou non, et tu aimes pouvoir aider sans jamais avoir besoin d'aide. Au fond, tu espères pourtant que ce que tu donnes soit reconnu.",
+      "passion": "Orgueil",
+      "centre": "emotionnel"
+    },
+    "3": {
+      "nom": "Le Battant",
+      "fierte-evitement": "Tu es fier·e de ton efficacité et de tes réussites, surtout sur les plans professionnel et social. Ce que tu cherches avant tout à éviter, c'est l'échec. Tu as presque toujours un objectif en cours et tu t'organises pour réussir, car le succès te semble la meilleure preuve de ta valeur. Il t'arrive d'endosser le rôle qu'on attend de toi au point d'oublier ce que tu ressens vraiment.",
+      "passion": "Mensonge",
+      "centre": "emotionnel"
+    },
+    "4": {
+      "nom": "Le Romantique",
+      "fierte-evitement": "Tu es fier·e de ta profonde sensibilité et de ton originalité. Ce que tu cherches avant tout à éviter, c'est la banalité. Tu as besoin d'être unique et de vivre des émotions intenses, et te sentir ordinaire t'est pénible. Cette sensibilité te rend attentif·ve à la beauté, mais elle nourrit aussi le sentiment d'être incompris·e et une certaine mélancolie.",
+      "passion": "Envie",
+      "centre": "emotionnel"
+    },
+    "5": {
+      "nom": "L'Observateur",
+      "fierte-evitement": "Tu es fier·e de tes connaissances et de ta capacité à comprendre. Ce que tu cherches avant tout à éviter, c'est le vide intérieur. Tu combles ce manque en accumulant savoir et compréhension, et tu préfères observer avant de t'engager. Tu protèges ton temps, ton énergie et ton espace personnel, et les moments de retrait te sont nécessaires pour te ressourcer.",
+      "passion": "Avarice",
+      "centre": "mental"
+    },
+    "6": {
+      "nom": "Le Loyal",
+      "fierte-evitement": "Tu es fier·e de ta loyauté envers les autres et de remplir ton devoir. Ce que tu cherches avant tout à éviter, c'est la déviance, c'est-à-dire sortir du cadre. Tu te sens en sécurité quand les règles sont claires et que tu appartiens à un groupe auquel tu restes fidèle. Le doute et l'anticipation de ce qui pourrait mal tourner t'accompagnent souvent, et tu oscilles entre confiance et méfiance envers l'autorité.",
+      "passion": "Peur",
+      "centre": "mental"
+    },
+    "7": {
+      "nom": "L'Épicurien",
+      "fierte-evitement": "Tu es fier·e de ton optimisme et de ta capacité à être gai·e et heureux·se. Ce que tu cherches avant tout à éviter, c'est la souffrance, physique comme morale. Tu te tournes vers ce qui est plaisant, tu multiplies les projets et les options, et tu vois spontanément le bon côté des choses. Quand une situation devient pénible, tu as tendance à passer vite à autre chose plutôt que de t'y attarder.",
+      "passion": "Gourmandise",
+      "centre": "mental"
+    },
+    "8": {
+      "nom": "Le Protecteur",
+      "fierte-evitement": "Tu es fier·e de ta force et de savoir faire respecter la justice. Ce que tu cherches avant tout à éviter, c'est la faiblesse. Tu tiens à garder le contrôle, à ne pas te laisser dominer et à défendre ce qui te semble juste, pour toi comme pour celles et ceux que tu protèges. Tu mets de côté les émotions qui te rendraient vulnérable, et ton énergie peut te pousser à agir avec excès.",
+      "passion": "Excès",
+      "centre": "instinctif"
+    },
+    "9": {
+      "nom": "Le Médiateur",
+      "fierte-evitement": "Tu es fier·e d'être facile à vivre, en paix et calme. Ce que tu cherches avant tout à éviter, c'est le conflit. Tu préserves ta paix intérieure et celle de ton entourage, quitte à mettre tes propres envies de côté et à repousser les décisions. Cette recherche d'harmonie fait de toi une personne apaisante, souvent précieuse pour réconcilier les autres, mais tu en oublies parfois tes propres besoins et qualités.",
+      "passion": "Paresse",
+      "centre": "instinctif"
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": 1,
+      "dimension": "fierte",
+      "texte": "Je tiens à faire les choses correctement et avec rigueur, et un travail imparfait me laisse insatisfait·e."
+    },
+    {
+      "id": 2,
+      "type": 5,
+      "dimension": "fierte",
+      "texte": "Avant d'agir ou de m'impliquer, j'ai besoin de comprendre à fond, en observant et en m'informant."
+    },
+    {
+      "id": 3,
+      "type": 9,
+      "dimension": "fierte",
+      "texte": "On me trouve calme et facile à vivre, et je comprends sans effort le point de vue de chacun."
+    },
+    {
+      "id": 4,
+      "type": 3,
+      "dimension": "fierte",
+      "texte": "Je me fixe des objectifs concrets et je m'organise efficacement pour les atteindre."
+    },
+    {
+      "id": 5,
+      "type": 7,
+      "dimension": "fierte",
+      "texte": "Je vois le bon côté des choses et j'aime avoir plein de projets et d'activités plaisantes en cours."
+    },
+    {
+      "id": 6,
+      "type": 2,
+      "dimension": "fierte",
+      "texte": "Je devine ce dont les autres ont besoin et je me rends disponible pour les aider, même sans qu'ils le demandent."
+    },
+    {
+      "id": 7,
+      "type": 6,
+      "dimension": "fierte",
+      "texte": "La loyauté envers mes proches ou mon groupe, et le fait de remplir mon devoir, comptent énormément pour moi."
+    },
+    {
+      "id": 8,
+      "type": 4,
+      "dimension": "fierte",
+      "texte": "Je ressens mes émotions de façon intense et j'ai besoin d'exprimer ce qui me rend unique."
+    },
+    {
+      "id": 9,
+      "type": 8,
+      "dimension": "fierte",
+      "texte": "Je prends les choses en main, je dis franchement ce que je pense et je défends ce qui me semble juste."
+    },
+    {
+      "id": 10,
+      "type": 4,
+      "dimension": "compulsion",
+      "texte": "J'ai le sentiment que les autres ne me comprennent pas vraiment, et ce qui est banal ou ordinaire me pèse."
+    },
+    {
+      "id": 11,
+      "type": 8,
+      "dimension": "compulsion",
+      "texte": "Je refuse de montrer mes faiblesses et je tiens à garder le contrôle, quitte à en souffrir."
+    },
+    {
+      "id": 12,
+      "type": 2,
+      "dimension": "compulsion",
+      "texte": "J'ai du mal à reconnaître mes propres besoins ou à demander de l'aide pour moi-même."
+    },
+    {
+      "id": 13,
+      "type": 6,
+      "dimension": "compulsion",
+      "texte": "J'anticipe ce qui pourrait mal tourner, je doute, et je me sens plus en sécurité quand les règles et le cadre sont clairs."
+    },
+    {
+      "id": 14,
+      "type": 1,
+      "dimension": "compulsion",
+      "texte": "Je retiens ma colère ou mon agacement, parce que l'exprimer ne me semble pas correct."
+    },
+    {
+      "id": 15,
+      "type": 5,
+      "dimension": "compulsion",
+      "texte": "Quand je ne comprends pas une situation, je préfère me retirer pour réfléchir plutôt que de m'y engager, et je protège mon temps et mon énergie."
+    },
+    {
+      "id": 16,
+      "type": 9,
+      "dimension": "compulsion",
+      "texte": "J'évite les conflits, quitte à mettre mes propres envies de côté ou à repousser des décisions."
+    },
+    {
+      "id": 17,
+      "type": 3,
+      "dimension": "compulsion",
+      "texte": "L'idée d'échouer, ou de paraître en échec aux yeux des autres, m'est très difficile à supporter."
+    },
+    {
+      "id": 18,
+      "type": 7,
+      "dimension": "compulsion",
+      "texte": "Face à une situation pénible ou triste, je passe vite à autre chose de plus agréable."
+    },
+    {
+      "id": 19,
+      "type": 6,
+      "dimension": "situation",
+      "texte": "Quand un proche rentre plus tard que prévu sans prévenir, j'imagine vite les scénarios les plus inquiétants."
+    },
+    {
+      "id": 20,
+      "type": 1,
+      "dimension": "situation",
+      "texte": "Quand je relis les devoirs d'un enfant ou le travail d'un collègue, ce sont d'abord les erreurs à corriger qui me sautent aux yeux."
+    },
+    {
+      "id": 21,
+      "type": 9,
+      "dimension": "situation",
+      "texte": "Quand mon ou ma partenaire, ou des amis, me demandent où aller dîner, je réponds « comme tu veux » même si j'ai une préférence."
+    },
+    {
+      "id": 22,
+      "type": 4,
+      "dimension": "situation",
+      "texte": "Quand je regarde la vie de mes proches ou ce que les gens publient sur les réseaux sociaux, j'ai l'impression qu'ils ont quelque chose qui me manque."
+    },
+    {
+      "id": 23,
+      "type": 8,
+      "dimension": "situation",
+      "texte": "Quand quelqu'un me manque de respect ou s'en prend à un proche, je réagis tout de suite et fermement, même si le ton monte."
+    },
+    {
+      "id": 24,
+      "type": 3,
+      "dimension": "situation",
+      "texte": "Avant un entretien, une réunion ou un repas de famille, je prépare ce que je vais raconter pour faire bonne impression."
+    },
+    {
+      "id": 25,
+      "type": 5,
+      "dimension": "situation",
+      "texte": "Lors d'une fête de famille ou d'une soirée qui dure, j'ai besoin de m'éclipser un moment au calme pour récupérer."
+    },
+    {
+      "id": 26,
+      "type": 2,
+      "dimension": "situation",
+      "texte": "Lors d'un repas entre amis ou en famille, je passe une bonne partie du temps à veiller à ce que chacun ait ce qu'il lui faut."
+    },
+    {
+      "id": 27,
+      "type": 7,
+      "dimension": "situation",
+      "texte": "Quand je prépare un week-end ou des vacances, j'ai envie de tout faire et j'ai du mal à renoncer à une activité."
+    }
+  ],
+  "calcul": {
+    "score_par_type": "Somme des réponses (0 à 4) des 3 questions du type (fierté, compulsion, situation). Score de 0 à 12 ; pourcentage = score / 12 × 100.",
+    "type_principal": "Le type au score le plus élevé.",
+    "departage": [
+      "En cas d'égalité entre plusieurs types au score le plus élevé, on pose la question de départage (voir « departage ») en ne proposant que les options des types ex æquo. Le type choisi devient le type principal."
+    ],
+    "fiabilite": "Écart entre le 1er et le 2e score : 4 points ou plus = net ; 1 à 3 points = à confirmer ; égalité = départagé par la question (fiabilité « départagé »).",
+    "aile": "Parmi les deux types voisins du type principal sur le cercle (le 1 a pour voisins le 9 et le 2, le 9 a pour voisins le 8 et le 1), celui qui a le plus haut score. Égalité = pas d'aile dominante.",
+    "centre": "Somme des scores des trois types de chaque centre : instinctif (8, 9, 1), émotionnel (2, 3, 4), mental (5, 6, 7). Affichage indicatif.",
+    "dimensions": {
+      "fierte": "Ce dont le type est fier (p. 17).",
+      "compulsion": "Ce que le type cherche à éviter (p. 18-19).",
+      "situation": "Mise en situation de la vie quotidienne (travail, famille, couple, amis, parentalité, conflits) formulée pour ne pas laisser deviner le type visé."
+    }
+  },
+  "departage": {
+    "quand": "Quand plusieurs types ont le même score le plus élevé.",
+    "questions": [
+      "Quelle situation essaies-tu d'éviter le plus souvent ?",
+      "Quel sentiment cherches-tu le plus à éviter ?"
+    ],
+    "consigne": "Pose une seule de ces deux questions (au choix, ou tirée au hasard) et ne propose que les options des types ex æquo. Le type choisi devient le type principal.",
+    "options": {
+      "1": {
+        "titre": "L'imperfection",
+        "texte": "Ne pas être à la hauteur ou faire mal les choses."
+      },
+      "2": {
+        "titre": "Le rejet",
+        "texte": "Ne pas être aimé·e ou ne pas compter pour les autres."
+      },
+      "3": {
+        "titre": "L'échec",
+        "texte": "Ne pas réussir ou ne pas avoir de valeur."
+      },
+      "4": {
+        "titre": "Le vide",
+        "texte": "Être ordinaire, sans identité ou sans profondeur."
+      },
+      "5": {
+        "titre": "L'incompétence",
+        "texte": "Être démuni·e ou ne pas avoir les ressources nécessaires."
+      },
+      "6": {
+        "titre": "L'insécurité",
+        "texte": "Être dans le doute ou ne pas savoir sur quoi compter."
+      },
+      "7": {
+        "titre": "La souffrance",
+        "texte": "Être limité·e, frustré·e ou coincé·e dans une situation."
+      },
+      "8": {
+        "titre": "La faiblesse",
+        "texte": "Être vulnérable, dépendant·e ou perdre le contrôle."
+      },
+      "9": {
+        "titre": "Le conflit",
+        "texte": "Être séparé·e, rejeté·e ou perdre le lien avec les autres."
+      }
+    }
+  }
+}
