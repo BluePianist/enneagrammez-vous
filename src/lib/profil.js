@@ -1,8 +1,8 @@
 import { calculerAile, NOMS_CENTRES } from './calcul.js';
 
 export const TEXTES_FIABILITE = {
-  net: 'Résultat net : votre type principal se détache de 3 points ou plus.',
-  'à confirmer': 'Résultat à confirmer : le 2e type est proche (0 à 2 points d\'écart). Il peut aussi vous correspondre.',
+  net: 'Résultat net : votre type principal se détache de 4 points ou plus.',
+  'à confirmer': 'Résultat à confirmer : le 2e type est proche (0 à 3 points d\'écart). Il peut aussi vous correspondre.',
   'ex æquo': 'Résultat ex æquo : plusieurs types restent à égalité, vous les avez départagés vous-même.'
 };
 
@@ -24,6 +24,8 @@ export function construireProfil(questionnaire, resultat, typeChoisi) {
     second,
     nomSecond: questionnaire.types[second].nom,
     nomCentre: NOMS_CENTRES[infos.centre],
+    maxType: resultat.maxType,
+    maxCentre: resultat.maxCentre,
     classement: resultat.classement.map(t => ({
       type: t,
       nom: questionnaire.types[t].nom,
@@ -33,7 +35,7 @@ export function construireProfil(questionnaire, resultat, typeChoisi) {
     centres: Object.entries(resultat.centres).map(([c, score]) => ({
       nom: NOMS_CENTRES[c],
       score,
-      pourcentage: Math.round(score / 24 * 100)
+      pourcentage: Math.round(score / resultat.maxCentre * 100)
     }))
   };
 }

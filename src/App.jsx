@@ -64,7 +64,7 @@ function Accueil({ onCommencer }) {
   return (
     <section className="carte">
       <h1>Découvrez votre type ennéagramme</h1>
-      <p>{QUESTIONS.length} affirmations, environ 5 minutes. À la fin, vous obtenez votre type principal, votre aile, et un récapitulatif à télécharger en PDF.</p>
+      <p>{QUESTIONS.length} affirmations, environ 7 minutes. À la fin, vous obtenez votre type principal, votre aile, et un récapitulatif à télécharger en PDF.</p>
       <p className="consigne">{questionnaire.consigne}</p>
       <button className="bouton principal" onClick={onCommencer}>Commencer le test</button>
       <p className="source">{questionnaire.source}</p>
@@ -159,7 +159,7 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
             <li key={l.type} className={l.type === type ? 'actif' : ''}>
               <span className="barre-libelle">{l.type}. {l.nom}</span>
               <span className="barre-fond"><span className="barre" style={{ width: `${l.pourcentage}%` }} /></span>
-              <span className="barre-valeur">{l.score}/8</span>
+              <span className="barre-valeur">{l.score}/{profil.maxType}</span>
             </li>
           ))}
         </ul>
@@ -169,7 +169,7 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
             <li key={c.nom}>
               <span className="barre-libelle">{c.nom}</span>
               <span className="barre-fond"><span className="barre" style={{ width: `${c.pourcentage}%` }} /></span>
-              <span className="barre-valeur">{c.score}/24</span>
+              <span className="barre-valeur">{c.score}/{profil.maxCentre}</span>
             </li>
           ))}
         </ul>

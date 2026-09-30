@@ -2,13 +2,14 @@
 // Reprise de /questionnaire/calcul.js (règle décrite dans questionnaire.json).
 // reponses : objet { idQuestion: valeur 0..4 }. questionnaire : contenu de questionnaire.json.
 export function calculerType(questionnaire, reponses) {
-  const scores = {}, compulsion = {};
-  for (let t = 1; t <= 9; t++) { scores[t] = 0; compulsion[t] = 0; }
+  const scores = {}, compulsion = {}, nbQuestions = {};
+  for (let t = 1; t <= 9; t++) { scores[t] = 0; compulsion[t] = 0; nbQuestions[t] = 0; }
 
   for (const q of questionnaire.questions) {
     const v = reponses[q.id];
     if (!Number.isInteger(v) || v < 0 || v > 4) throw new Error(`Réponse manquante ou invalide pour la question ${q.id}`);
     scores[q.type] += v;
+    nbQuestions[q.type]++;
     if (q.dimension === 'compulsion') compulsion[q.type] = v;
   }
 
@@ -19,14 +20,17 @@ export function calculerType(questionnaire, reponses) {
   const exAequo = classement.filter(t => scores[t] === scores[premier] && compulsion[t] === compulsion[premier]);
 
   const ecart = scores[premier] - scores[classement[1]];
-  const fiabilite = exAequo.length > 1 ? 'ex æquo' : ecart >= 3 ? 'net' : 'à confirmer';
+  const fiabilite = exAequo.length > 1 ? 'ex æquo' : ecart >= 4 ? 'net' : 'à confirmer';
 
   const centres = { instinctif: [8, 9, 1], emotionnel: [2, 3, 4], mental: [5, 6, 7] };
   const scoresCentres = {};
   for (const [c, types] of Object.entries(centres)) scoresCentres[c] = types.reduce((s, t) => s + scores[t], 0);
 
   const pourcentages = {};
-  for (const t in scores) pourcentages[t] = Math.round(scores[t] / 8 * 100);
+  for (const t in scores) pourcentages[t] = Math.round(scores[t] / (nbQuestions[t] * 4) * 100);
+
+  // Score maximal d'un type (3 questions × 4 = 12) et d'un centre (3 types).
+  const maxType = Math.max(...Object.values(nbQuestions)) * 4;
 
   return {
     typePrincipal: exAequo.length > 1 ? null : premier,
@@ -36,7 +40,9 @@ export function calculerType(questionnaire, reponses) {
     scores,
     pourcentages,
     classement,
-    centres: scoresCentres
+    centres: scoresCentres,
+    maxType,
+    maxCentre: maxType * 3
   };
 }
 

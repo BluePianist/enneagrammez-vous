@@ -1,6 +1,6 @@
 # Enneagrammez-vous
 
-Web app qui détermine votre type ennéagramme à l'aide d'un questionnaire de 18 affirmations.
+Web app qui détermine votre type ennéagramme à l'aide d'un questionnaire de 27 affirmations.
 Elle fonctionne sur ordinateur et sur téléphone, entièrement dans le navigateur : aucune réponse n'est stockée ni envoyée.
 À la fin du test, un récapitulatif du profil peut être téléchargé en PDF (généré dans le navigateur).
 

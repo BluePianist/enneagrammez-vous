@@ -62,11 +62,11 @@ export function genererPdf(profil) {
 
   y += 3;
   texte('Scores par type', { taille: 13, gras: true, couleur: PRUNE, espace: 4 });
-  barres(profil.classement.map(l => ({ libelle: `${l.type}. ${l.nom}`, score: l.score, actif: l.type === type })), 8);
+  barres(profil.classement.map(l => ({ libelle: `${l.type}. ${l.nom}`, score: l.score, actif: l.type === type })), profil.maxType);
 
   y += 3;
   texte('Centres (indicatif)', { taille: 13, gras: true, couleur: PRUNE, espace: 4 });
-  barres(profil.centres.map(c => ({ libelle: c.nom, score: c.score })), 24);
+  barres(profil.centres.map(c => ({ libelle: c.nom, score: c.score })), profil.maxCentre);
 
   y = 297 - 22;
   texte('Ce résultat est indicatif : seule une réflexion personnelle permet de confirmer son type.', { taille: 8, couleur: GRIS, espace: 0.5 });
