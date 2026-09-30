@@ -9,6 +9,15 @@ const point = (a, r = R) => ({ x: CX + r * Math.cos(a), y: CY + r * Math.sin(a) 
 // Triangle 3-6-9 et hexagramme 1-4-2-8-5-7 : les lignes qui relient les types.
 const LIENS = [[9, 3], [3, 6], [6, 9], [1, 4], [4, 2], [2, 8], [8, 5], [5, 7], [7, 1]];
 
+// Le contour est découpé en petits arcs dont l'intensité suit la distance au point,
+// ce qui donne un dégradé tout autour du cercle (le SVG n'a pas de dégradé circulaire).
+const NB_ARCS = 72;
+const ARCS = Array.from({ length: NB_ARCS }, (_, i) => {
+  const debut = (i / NB_ARCS) * 2 * Math.PI, fin = ((i + 1.05) / NB_ARCS) * 2 * Math.PI;
+  const d = point(debut), f = point(fin);
+  return { milieu: (debut + fin) / 2, d: `M${d.x} ${d.y}A${R} ${R} 0 0 1 ${f.x} ${f.y}` };
+});
+
 // Angle du point de l'utilisateur : sur le type si l'aile est nulle, puis de plus en plus
 // vers l'aile (jusqu'à mi-chemin) quand la part de l'aile augmente.
 function angleDuPoint({ type, aile, poidsAile }) {
@@ -49,7 +58,7 @@ export default function SchemaEnneagramme({ profil }) {
           })}
         </defs>
 
-        <circle cx={CX} cy={CY} r={R} className="schema-cercle" />
+        {ARCS.map((arc, i) => <path key={i} d={arc.d} className="schema-arc" style={{ strokeOpacity: intensite(arc.milieu, a) }} />)}
 
         {LIENS.map(([de, vers]) => {
           const d = point(angle(de)), v = point(angle(vers));

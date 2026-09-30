@@ -10,7 +10,7 @@
   --sur-accent: #3a1f28;
   --piste: #3a1f28;
   --barre: #c47a90;
-  --point: #ffc86b;
+  --point: #ff5c93;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--texte);
   background: var(--fond);
@@ -129,7 +129,7 @@ h2:first-child { margin-top: 0; }
 /* Schéma de l'ennéagramme */
 .schema { margin: 0; }
 .schema-svg { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; }
-.schema-cercle { fill: none; stroke: var(--gris); stroke-opacity: .45; stroke-width: 2.5; }
+.schema-arc { fill: none; stroke: var(--point); stroke-width: 2.5; }
 .schema-lien { stroke-width: 3; stroke-linecap: round; }
 .schema-noeud { fill: var(--point); }
 .schema-chiffre { font-size: 22px; font-weight: 700; fill: var(--gris); }
@@ -137,4 +137,4 @@ h2:first-child { margin-top: 0; }
 .schema-halo { fill: var(--point); opacity: .3; }
 .schema-point { fill: var(--point); stroke: var(--carte); stroke-width: 3; }
 .schema-legende { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px; }
-.schema-pastille { width: 14px; height: 14px; border-radius: 50%; background: var(--point); box-shadow: 0 0 0 4px rgba(255, 200, 107, .3); }
+.schema-pastille { width: 14px; height: 14px; border-radius: 50%; background: var(--point); box-shadow: 0 0 0 4px rgba(255, 92, 147, .3); }
