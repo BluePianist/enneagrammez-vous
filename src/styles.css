@@ -131,9 +131,9 @@ h2:first-child { margin-top: 0; }
 .schema-svg { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; }
 .schema-cercle { fill: none; stroke: var(--gris); stroke-opacity: .45; stroke-width: 2.5; }
 .schema-lien { stroke-width: 3; stroke-linecap: round; }
-.schema-noeud { fill: var(--accent); }
+.schema-noeud { fill: var(--point); }
 .schema-chiffre { font-size: 22px; font-weight: 700; fill: var(--gris); }
-.schema-chiffre.actif { font-size: 28px; font-weight: 800; fill: var(--accent); }
+.schema-chiffre.actif { font-size: 28px; font-weight: 800; fill: var(--point); }
 .schema-halo { fill: var(--point); opacity: .3; }
 .schema-point { fill: var(--point); stroke: var(--carte); stroke-width: 3; }
 .schema-legende { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px; }

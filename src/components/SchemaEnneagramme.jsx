@@ -42,8 +42,8 @@ export default function SchemaEnneagramme({ profil }) {
             const d = point(angle(de)), v = point(angle(vers));
             return (
               <linearGradient key={`${de}-${vers}`} id={`${id}-${de}-${vers}`} gradientUnits="userSpaceOnUse" x1={d.x} y1={d.y} x2={v.x} y2={v.y}>
-                <stop offset="0" style={{ stopColor: 'var(--accent)', stopOpacity: intensite(angle(de), a) }} />
-                <stop offset="1" style={{ stopColor: 'var(--accent)', stopOpacity: intensite(angle(vers), a) }} />
+                <stop offset="0" style={{ stopColor: 'var(--point)', stopOpacity: intensite(angle(de), a) }} />
+                <stop offset="1" style={{ stopColor: 'var(--point)', stopOpacity: intensite(angle(vers), a) }} />
               </linearGradient>
             );
           })}
