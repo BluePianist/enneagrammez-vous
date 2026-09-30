@@ -64,7 +64,11 @@ function Accueil({ onCommencer }) {
   return (
     <section className="carte">
       <h1>Découvre ton type ennéagramme</h1>
-      <p>{QUESTIONS.length} affirmations, environ 7 minutes. À la fin, tu obtiens ton type principal, ton aile, et un récapitulatif à télécharger en PDF.</p>
+      <p>
+        {QUESTIONS.length} affirmations, environ 7 minutes pour te découvrir un peu plus.
+        <br />
+        À la fin, tu découvriras ton type principal, ton aile et tu pourras télécharger un récapitulatif de ton profil en PDF.
+      </p>
       <p className="consigne">{questionnaire.consigne}</p>
       <button className="bouton principal" onClick={onCommencer}>Commencer le test</button>
       <p className="source">{questionnaire.source}</p>
