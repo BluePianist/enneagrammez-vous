@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import questionnaire from './data/questionnaire.json';
 import { calculerType, appliquerDepartage } from './lib/calcul.js';
 import { construireProfil } from './lib/profil.js';
+import SchemaEnneagramme from './components/SchemaEnneagramme.jsx';
 
 const QUESTIONS = questionnaire.questions;
 
@@ -163,6 +164,12 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
         {profil.fiabilite !== 'net' && (
           <p className="note">Type le plus proche : {profil.second}, {profil.nomSecond}.</p>
         )}
+      </section>
+
+      <section className="carte">
+        <h2>Ta place sur le cercle</h2>
+        <SchemaEnneagramme profil={profil} />
+        <p className="note">Les lignes relient les types entre eux : plus elles sont lumineuses, plus elles passent près de ton profil.</p>
       </section>
 
       <section className="carte">

@@ -18,6 +18,8 @@ export function construireProfil(questionnaire, resultat) {
     aile,
     infos,
     nomAile: aile ? questionnaire.types[aile].nom : null,
+    // Part de l'aile dans le couple type + aile (0 = pile sur le type, 0,5 = à mi-chemin).
+    poidsAile: aile ? poidsAile(resultat.scores[type], resultat.scores[aile]) : 0,
     fiabilite: resultat.fiabilite,
     texteFiabilite: TEXTES_FIABILITE[resultat.fiabilite],
     second,
@@ -37,4 +39,9 @@ export function construireProfil(questionnaire, resultat) {
       pourcentage: Math.round(score / resultat.maxCentre * 100)
     }))
   };
+}
+
+function poidsAile(scoreType, scoreAile) {
+  const total = scoreType + scoreAile;
+  return total === 0 ? 0 : scoreAile / total;
 }

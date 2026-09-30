@@ -124,3 +124,16 @@ h2:first-child { margin-top: 0; }
   .barres li { grid-template-columns: 11rem minmax(0, 1fr) 3.2rem; grid-template-areas: "libelle fond valeur"; align-items: center; }
   .actions { grid-template-columns: 2fr 1fr; }
 }
+
+/* Schéma de l'ennéagramme */
+.schema { margin: 0; }
+.schema-svg { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; }
+.schema-cercle { fill: none; stroke: var(--gris); stroke-opacity: .45; stroke-width: 2.5; }
+.schema-lien { stroke-width: 3; stroke-linecap: round; }
+.schema-noeud { fill: var(--accent); }
+.schema-chiffre { font-size: 22px; font-weight: 700; fill: var(--gris); }
+.schema-chiffre.actif { font-size: 28px; font-weight: 800; fill: var(--accent); }
+.schema-halo { fill: var(--accent); opacity: .25; }
+.schema-point { fill: var(--accent); stroke: var(--carte); stroke-width: 3; }
+.schema-legende { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px; }
+.schema-pastille { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(242, 167, 186, .25); }
