@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { calculerType } from '../src/lib/calcul.js';
-import { construireProfil } from '../src/lib/profil.js';
+import { construireProfil, eviteCourt } from '../src/lib/profil.js';
 
 const questionnaire = JSON.parse(readFileSync(new URL('../src/data/questionnaire.json', import.meta.url)));
 const repondre = (parType) => Object.fromEntries(questionnaire.questions.map(q => [q.id, parType(q)]));
@@ -50,4 +50,11 @@ test('3 points d\'écart restent à confirmer, 4 points sont nets', () => {
 
 test('réponse manquante refusée', () => {
   assert.throws(() => calculerType(questionnaire, {}));
+});
+
+test('libellés courts pour le départage', () => {
+  assert.equal(eviteCourt(questionnaire.types[1]), 'La colère');
+  assert.equal(eviteCourt(questionnaire.types[2]), 'Reconnaître vos propres besoins');
+  assert.equal(eviteCourt(questionnaire.types[6]), 'La déviance');
+  assert.equal(questionnaire.types[8].nom, 'Le Protecteur');
 });

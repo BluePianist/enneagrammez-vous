@@ -6,6 +6,14 @@ export const TEXTES_FIABILITE = {
   'ex æquo': 'Résultat ex æquo : plusieurs types restent à égalité, vous les avez départagés vous-même.'
 };
 
+// Version courte de ce qu'un type évite (« La colère »), tirée de la première phrase
+// du paragraphe « evite » : sert aux boutons de départage.
+export function eviteCourt(infos) {
+  const m = infos.evite.match(/éviter (.+?)[,.]/);
+  const court = (m ? m[1] : infos.evite.split('.')[0]).replace(/^de /, '');
+  return court.charAt(0).toUpperCase() + court.slice(1);
+}
+
 // Assemble ce qu'on affiche (écran et PDF) à partir du résultat du calcul
 // et, en cas d'ex æquo, du type choisi par la personne.
 export function construireProfil(questionnaire, resultat, typeChoisi) {

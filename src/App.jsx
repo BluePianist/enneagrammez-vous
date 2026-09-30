@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import questionnaire from './data/questionnaire.json';
 import { calculerType } from './lib/calcul.js';
-import { construireProfil } from './lib/profil.js';
+import { construireProfil, eviteCourt } from './lib/profil.js';
 
 const QUESTIONS = questionnaire.questions;
 
@@ -123,7 +123,7 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
         <div className="echelle">
           {resultat.exAequo.map(t => (
             <button key={t} className="choix" onClick={() => onChoisirType(t)}>
-              {questionnaire.types[t].evite}
+              {eviteCourt(questionnaire.types[t])}
             </button>
           ))}
         </div>
@@ -141,9 +141,9 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
         {aile && <p className="aile">Aile {aile} : {profil.nomAile} <span className="notation">({type}w{aile})</span></p>}
         {!aile && <p className="aile">Pas d'aile dominante</p>}
         <p className={`fiabilite fiabilite-${profil.fiabilite === 'net' ? 'net' : 'doute'}`}>{profil.texteFiabilite}</p>
+        <p className="evite">{infos.evite}</p>
         <dl className="traits">
           <div><dt>Fierté</dt><dd>« {infos.fierte} »</dd></div>
-          <div><dt>Ce que ce type évite</dt><dd>{infos.evite}</dd></div>
           <div><dt>Passion</dt><dd>{infos.passion}</dd></div>
           <div><dt>Centre</dt><dd>{profil.nomCentre}</dd></div>
         </dl>

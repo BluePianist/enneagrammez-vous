@@ -47,11 +47,11 @@ export function genererPdf(profil) {
   const { type, aile, infos } = profil;
   texte(`Type ${type} : ${infos.nom}`, { taille: 22, gras: true, couleur: PRUNE, espace: 3 });
   texte(aile ? `Aile ${aile} : ${profil.nomAile} (${type}w${aile})` : 'Pas d\'aile dominante', { taille: 13, espace: 3 });
-  texte(profil.texteFiabilite, { taille: 10, couleur: GRIS, espace: 7 });
+  texte(profil.texteFiabilite, { taille: 10, couleur: GRIS, espace: 6 });
+  texte(infos.evite, { taille: 11, espace: 6 });
 
   for (const [libelle, valeur] of [
     ['Fierté', `« ${infos.fierte} »`],
-    ['Ce que ce type évite', infos.evite],
     ['Passion', infos.passion],
     ['Centre', profil.nomCentre]
   ]) {

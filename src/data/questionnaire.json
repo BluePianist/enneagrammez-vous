@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "titre": "Enneagrammez-vous : questionnaire maison",
   "source": "Inspiré de F. et P. Chabreuil, « L'ennéagramme, dynamique de connaissance et d'évolution » (9edce.pdf) : fiertés des types (p. 17), compulsions d'évitement (p. 18-19), confusions entre types (p. 61-64).",
   "consigne": "Pour chaque affirmation, indiquez à quelle fréquence elle vous correspond. Pensez à la personne que vous êtes vraiment depuis longtemps, pas à celle que vous aimeriez être.",
@@ -29,63 +29,63 @@
     "1": {
       "nom": "Le Perfectionniste",
       "fierte": "Je suis droit, je suis travailleur",
-      "evite": "La colère",
+      "evite": "Vous cherchez avant tout à éviter la colère, la vôtre comme celle des autres. Pour cela, vous vous efforcez de faire parfaitement ce qui doit être fait. Mais comme rien n'est jamais tout à fait à la hauteur de vos exigences, une irritation s'installe, que vous gardez souvent pour vous.",
       "passion": "Colère",
       "centre": "instinctif"
     },
     "2": {
       "nom": "L'Altruiste",
       "fierte": "J'aime, j'aide",
-      "evite": "La reconnaissance de ses propres besoins",
+      "evite": "Vous cherchez avant tout à éviter de reconnaître vos propres besoins. Vous vous tournez spontanément vers ceux des autres, exprimés ou non, et vous êtes fier ou fière de pouvoir aider sans jamais avoir besoin d'aide. Au fond, vous espérez pourtant que ce que vous donnez soit reconnu.",
       "passion": "Orgueil",
       "centre": "emotionnel"
     },
     "3": {
       "nom": "Le Battant",
       "fierte": "Je réussis, je suis efficace",
-      "evite": "L'échec",
+      "evite": "Vous cherchez avant tout à éviter l'échec. Vous avez presque toujours un objectif en cours et vous vous organisez pour réussir, car le succès vous semble la meilleure preuve de votre valeur. Il vous arrive d'endosser le rôle qu'on attend de vous au point d'oublier ce que vous ressentez vraiment.",
       "passion": "Mensonge",
       "centre": "emotionnel"
     },
     "4": {
       "nom": "Le Romantique",
       "fierte": "Je suis différent, je suis sensible",
-      "evite": "La banalité",
+      "evite": "Vous cherchez avant tout à éviter la banalité. Vous avez besoin d'être unique et de vivre des émotions intenses, et vous percevoir comme ordinaire vous est pénible. Cette sensibilité vous rend attentif ou attentive à la beauté, mais elle nourrit aussi le sentiment d'être incompris et une certaine mélancolie.",
       "passion": "Envie",
       "centre": "emotionnel"
     },
     "5": {
       "nom": "L'Observateur",
       "fierte": "Je sais, je comprends",
-      "evite": "Le vide intérieur",
+      "evite": "Vous cherchez avant tout à éviter le vide intérieur. Vous comblez ce manque en accumulant connaissances et compréhension, et vous préférez observer avant de vous engager. Vous protégez votre temps, votre énergie et votre espace personnel, et les moments de retrait vous sont nécessaires pour vous ressourcer.",
       "passion": "Avarice",
       "centre": "mental"
     },
     "6": {
       "nom": "Le Loyal",
       "fierte": "Je suis loyal, je fais mon devoir",
-      "evite": "La déviance",
+      "evite": "Vous cherchez avant tout à éviter la déviance, c'est-à-dire sortir du cadre. Vous vous sentez en sécurité quand les règles sont claires et que vous appartenez à un groupe auquel vous restez fidèle. Le doute et l'anticipation de ce qui pourrait mal tourner vous accompagnent souvent, et vous oscillez entre confiance et méfiance envers l'autorité.",
       "passion": "Peur",
       "centre": "mental"
     },
     "7": {
       "nom": "L'Épicurien",
       "fierte": "Je suis optimiste, je suis heureux",
-      "evite": "La souffrance",
+      "evite": "Vous cherchez avant tout à éviter la souffrance, physique comme morale. Vous vous tournez vers ce qui est plaisant, multipliez les projets et les options, et voyez spontanément le bon côté des choses. Quand une situation devient pénible, vous avez tendance à passer rapidement à autre chose plutôt que de vous y attarder.",
       "passion": "Gourmandise",
       "centre": "mental"
     },
     "8": {
-      "nom": "Le Chef",
+      "nom": "Le Protecteur",
       "fierte": "Je suis fort, je suis juste",
-      "evite": "La faiblesse",
+      "evite": "Vous cherchez avant tout à éviter la faiblesse. Vous tenez à garder le contrôle, à ne pas vous laisser dominer et à défendre ce qui vous semble juste, pour vous comme pour ceux que vous protégez. Vous mettez de côté les émotions qui vous rendraient vulnérable, et votre énergie peut vous pousser à agir avec excès.",
       "passion": "Excès",
       "centre": "instinctif"
     },
     "9": {
       "nom": "Le Médiateur",
       "fierte": "Je suis facile à vivre, je suis bien, calme",
-      "evite": "Le conflit",
+      "evite": "Vous cherchez avant tout à éviter le conflit. Vous préservez votre paix intérieure et celle de votre entourage, quitte à mettre vos propres envies de côté et à repousser les décisions. Cette recherche d'harmonie fait de vous une personne apaisante, souvent précieuse pour réconcilier les autres, mais vous en oubliez parfois vos propres besoins et qualités.",
       "passion": "Paresse",
       "centre": "instinctif"
     }
