@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "2.0-proposition",
   "titre": "Enneagrammez-vous : questionnaire maison",
   "source": "Inspiré de F. et P. Chabreuil, « L'ennéagramme, dynamique de connaissance et d'évolution » (9edce.pdf) : fiertés des types (p. 17), compulsions d'évitement (p. 18-19), confusions entre types (p. 61-64).",
   "consigne": "Pour chaque affirmation, indique à quelle fréquence elle te correspond. Pense à la personne que tu es vraiment depuis longtemps, pas à celle que tu aimerais être.",
@@ -64,7 +64,7 @@
     },
     "7": {
       "nom": "L'Épicurien",
-      "fierte-evitement": "Tu es fier·e de ton optimisme et de ta capacité à être gai·e et heureux·se. Ce que tu cherches avant tout à éviter, c'est la souffrance, physique comme morale. Tu te tournes vers ce qui est plaisant, tu multiplies les projets et les options, et tu vois spontanément le bon côté des choses. Quand une situation devient pénible, tu as tendance à passer vite à autre chose plutôt que de t'y attarder.",
+      "fierte-evitement": "Tu es fier·e de ton optimisme et de ta capacité à être gai·e et heureux·euse. Ce que tu cherches avant tout à éviter, c'est la souffrance, physique comme morale. Tu te tournes vers ce qui est plaisant, tu multiplies les projets et les options, et tu vois spontanément le bon côté des choses. Quand une situation devient pénible, tu as tendance à passer vite à autre chose plutôt que de t'y attarder.",
       "passion": "Gourmandise",
       "centre": "mental"
     },
@@ -86,187 +86,331 @@
       "id": 1,
       "type": 1,
       "dimension": "fierte",
-      "texte": "Je tiens à faire les choses correctement et avec rigueur, et un travail imparfait me laisse insatisfait·e."
+      "texte": "J'ai du mal à laisser passer un travail bâclé.",
+      "poids": {
+        "1": 1
+      }
     },
     {
       "id": 2,
       "type": 5,
       "dimension": "fierte",
-      "texte": "Avant d'agir ou de m'impliquer, j'ai besoin de comprendre à fond, en observant et en m'informant."
+      "texte": "J'ai besoin de comprendre à fond avant d'agir.",
+      "poids": {
+        "5": 1,
+        "3": -0.5
+      }
     },
     {
       "id": 3,
       "type": 9,
       "dimension": "fierte",
-      "texte": "On me trouve calme et facile à vivre, et je comprends sans effort le point de vue de chacun."
+      "texte": "On me trouve calme et facile à vivre.",
+      "poids": {
+        "9": 1
+      }
     },
     {
       "id": 4,
       "type": 3,
       "dimension": "fierte",
-      "texte": "Je me fixe des objectifs concrets et je m'organise efficacement pour les atteindre."
+      "texte": "Je me fixe des objectifs concrets.",
+      "poids": {
+        "3": 1,
+        "9": -0.5
+      }
     },
     {
       "id": 5,
       "type": 7,
       "dimension": "fierte",
-      "texte": "Je vois le bon côté des choses et j'aime avoir plein de projets et d'activités plaisantes en cours."
+      "texte": "Je suis positif·ve : je vois le bon côté des choses.",
+      "poids": {
+        "7": 1,
+        "4": -0.5
+      }
     },
     {
       "id": 6,
       "type": 2,
       "dimension": "fierte",
-      "texte": "Je devine ce dont les autres ont besoin et je me rends disponible pour les aider, même sans qu'ils le demandent."
+      "texte": "Je devine ce dont les autres ont besoin.",
+      "poids": {
+        "2": 1,
+        "5": -0.5
+      }
     },
     {
       "id": 7,
       "type": 6,
       "dimension": "fierte",
-      "texte": "La loyauté envers mes proches ou mon groupe, et le fait de remplir mon devoir, comptent énormément pour moi."
+      "texte": "La loyauté envers mes proches compte énormément pour moi.",
+      "poids": {
+        "6": 1
+      }
     },
     {
       "id": 8,
       "type": 4,
       "dimension": "fierte",
-      "texte": "Je ressens mes émotions de façon intense et j'ai besoin d'exprimer ce qui me rend unique."
+      "texte": "Je ressens mes émotions de façon très intense.",
+      "poids": {
+        "4": 1,
+        "7": -0.5
+      }
     },
     {
       "id": 9,
       "type": 8,
       "dimension": "fierte",
-      "texte": "Je prends les choses en main, je dis franchement ce que je pense et je défends ce qui me semble juste."
+      "texte": "Je dis franchement ce que je pense, même si ça dérange.",
+      "poids": {
+        "8": 1,
+        "3": -0.5
+      }
     },
     {
       "id": 10,
       "type": 4,
       "dimension": "compulsion",
-      "texte": "J'ai le sentiment que les autres ne me comprennent pas vraiment, et ce qui est banal ou ordinaire me pèse."
+      "texte": "Faire « comme tout le monde » m'intéresse peu.",
+      "poids": {
+        "4": 2,
+        "6": -0.5
+      }
     },
     {
       "id": 11,
       "type": 8,
       "dimension": "compulsion",
-      "texte": "Je refuse de montrer mes faiblesses et je tiens à garder le contrôle, quitte à en souffrir."
+      "texte": "Quand on me dit non, je cherche à faire changer l'autre d'avis.",
+      "poids": {
+        "8": 2,
+        "2": -0.5
+      }
     },
     {
       "id": 12,
       "type": 2,
       "dimension": "compulsion",
-      "texte": "J'ai du mal à reconnaître mes propres besoins ou à demander de l'aide pour moi-même."
+      "texte": "J'ai du mal à accepter l'aide des autres.",
+      "poids": {
+        "2": 2,
+        "6": -0.5
+      }
     },
     {
       "id": 13,
       "type": 6,
       "dimension": "compulsion",
-      "texte": "J'anticipe ce qui pourrait mal tourner, je doute, et je me sens plus en sécurité quand les règles et le cadre sont clairs."
+      "texte": "Avant de me lancer, j'imagine ce qui pourrait mal tourner.",
+      "poids": {
+        "6": 2,
+        "7": -0.5
+      }
     },
     {
       "id": 14,
       "type": 1,
       "dimension": "compulsion",
-      "texte": "Je retiens ma colère ou mon agacement, parce que l'exprimer ne me semble pas correct."
+      "texte": "Quand quelque chose m'agace, je le garde pour moi.",
+      "poids": {
+        "1": 2,
+        "8": -0.5
+      }
     },
     {
       "id": 15,
       "type": 5,
       "dimension": "compulsion",
-      "texte": "Quand je ne comprends pas une situation, je préfère me retirer pour réfléchir plutôt que de m'y engager, et je protège mon temps et mon énergie."
+      "texte": "Quand je ne maîtrise pas un sujet, je préfère me taire.",
+      "poids": {
+        "5": 2
+      }
     },
     {
       "id": 16,
       "type": 9,
       "dimension": "compulsion",
-      "texte": "J'évite les conflits, quitte à mettre mes propres envies de côté ou à repousser des décisions."
+      "texte": "Je laisse tomber mon avis pour éviter un conflit.",
+      "poids": {
+        "9": 2,
+        "8": -0.5
+      }
     },
     {
       "id": 17,
       "type": 3,
       "dimension": "compulsion",
-      "texte": "L'idée d'échouer, ou de paraître en échec aux yeux des autres, m'est très difficile à supporter."
+      "texte": "J'adapte mon image selon les personnes que je rencontre.",
+      "poids": {
+        "3": 2,
+        "4": -0.5
+      }
     },
     {
       "id": 18,
       "type": 7,
       "dimension": "compulsion",
-      "texte": "Face à une situation pénible ou triste, je passe vite à autre chose de plus agréable."
+      "texte": "Quand une conversation devient triste, je la ramène vers quelque chose de léger.",
+      "poids": {
+        "7": 2,
+        "1": -0.5
+      }
     },
     {
       "id": 19,
       "type": 6,
       "dimension": "situation",
-      "texte": "Quand un proche rentre plus tard que prévu sans prévenir, j'imagine vite les scénarios les plus inquiétants."
+      "texte": "Quand un·e proche rentre en retard sans prévenir, j'imagine le pire.",
+      "poids": {
+        "6": 1
+      }
     },
     {
       "id": 20,
       "type": 1,
       "dimension": "situation",
-      "texte": "Quand je relis les devoirs d'un enfant ou le travail d'un collègue, ce sont d'abord les erreurs à corriger qui me sautent aux yeux."
+      "texte": "Quand je relis le travail de quelqu'un, je vois d'abord les erreurs.",
+      "poids": {
+        "1": 1
+      }
     },
     {
       "id": 21,
       "type": 9,
       "dimension": "situation",
-      "texte": "Quand mon ou ma partenaire, ou des amis, me demandent où aller dîner, je réponds « comme tu veux » même si j'ai une préférence."
+      "texte": "Quand on me demande où aller dîner, je réponds « comme tu veux » même si j'ai une préférence.",
+      "poids": {
+        "9": 1
+      }
     },
     {
       "id": 22,
       "type": 4,
       "dimension": "situation",
-      "texte": "Quand je regarde la vie de mes proches ou ce que les gens publient sur les réseaux sociaux, j'ai l'impression qu'ils ont quelque chose qui me manque."
+      "texte": "En regardant la vie des autres, j'ai l'impression qu'il me manque quelque chose.",
+      "poids": {
+        "4": 1
+      }
     },
     {
       "id": 23,
       "type": 8,
       "dimension": "situation",
-      "texte": "Quand quelqu'un me manque de respect ou s'en prend à un proche, je réagis tout de suite et fermement, même si le ton monte."
+      "texte": "Quand on manque de respect à un·e proche, je réagis tout de suite.",
+      "poids": {
+        "8": 1,
+        "1": -0.5,
+        "5": -0.5
+      }
     },
     {
       "id": 24,
       "type": 3,
       "dimension": "situation",
-      "texte": "Avant un entretien, une réunion ou un repas de famille, je prépare ce que je vais raconter pour faire bonne impression."
+      "texte": "Avant un rendez-vous important, je prépare mon speech.",
+      "poids": {
+        "3": 1
+      }
     },
     {
       "id": 25,
       "type": 5,
       "dimension": "situation",
-      "texte": "Lors d'une fête de famille ou d'une soirée qui dure, j'ai besoin de m'éclipser un moment au calme pour récupérer."
+      "texte": "En groupe, j'écoute beaucoup et je parle peu.",
+      "poids": {
+        "5": 1,
+        "2": -0.5
+      }
     },
     {
       "id": 26,
       "type": 2,
       "dimension": "situation",
-      "texte": "Lors d'un repas entre amis ou en famille, je passe une bonne partie du temps à veiller à ce que chacun ait ce qu'il lui faut."
+      "texte": "Pendant un repas, je veille à ce que chacun·e ait ce qu'il lui faut.",
+      "poids": {
+        "2": 1
+      }
     },
     {
       "id": 27,
       "type": 7,
       "dimension": "situation",
-      "texte": "Quand je prépare un week-end ou des vacances, j'ai envie de tout faire et j'ai du mal à renoncer à une activité."
+      "texte": "En vacances, j'ai du mal à renoncer à une activité.",
+      "poids": {
+        "7": 1,
+        "9": -0.5
+      }
+    },
+    {
+      "id": 28,
+      "type": 6,
+      "dimension": "amour",
+      "texte": "J'ai besoin d'être rassuré·e sur la solidité de mon couple.",
+      "poids": {
+        "1": -0.25,
+        "2": 0.5,
+        "3": -0.25,
+        "4": 0.5,
+        "5": -0.5,
+        "6": 1,
+        "7": -0.5,
+        "8": -1,
+        "9": 0.25
+      }
+    },
+    {
+      "id": 29,
+      "type": 3,
+      "dimension": "amour",
+      "texte": "J'aime que mon couple fasse bonne impression aux yeux des autres.",
+      "poids": {
+        "1": 0.5,
+        "2": 0.25,
+        "3": 1,
+        "4": -0.5,
+        "5": -1,
+        "6": 0.25,
+        "7": -0.25,
+        "8": -0.5,
+        "9": -0.25
+      }
+    },
+    {
+      "id": 30,
+      "type": 7,
+      "dimension": "amour",
+      "texte": "Quand la routine s'installe dans mon couple, j'ai besoin de nouveauté.",
+      "poids": {
+        "1": -0.5,
+        "2": -0.25,
+        "3": 0.25,
+        "4": 0.5,
+        "5": -0.25,
+        "6": -1,
+        "7": 1,
+        "8": 0.5,
+        "9": -0.5
+      }
     }
   ],
   "calcul": {
-    "score_par_type": "Somme des réponses (0 à 4) des 3 questions du type (fierté, compulsion, situation). Score de 0 à 12 ; pourcentage = score / 12 × 100.",
-    "type_principal": "Le type au score le plus élevé.",
-    "departage": [
-      "En cas d'égalité entre plusieurs types au score le plus élevé, on pose la question de départage (voir « departage ») en ne proposant que les options des types ex æquo. Le type choisi devient le type principal."
-    ],
-    "fiabilite": "Écart entre le 1er et le 2e score : 4 points ou plus = net ; 1 à 3 points = à confirmer ; égalité = départagé par la question (fiabilité « départagé »).",
-    "aile": "Parmi les deux types voisins du type principal sur le cercle (le 1 a pour voisins le 9 et le 2, le 9 a pour voisins le 8 et le 1), celui qui a le plus haut score. Égalité = pas d'aile dominante.",
-    "centre": "Somme des scores des trois types de chaque centre : instinctif (8, 9, 1), émotionnel (2, 3, 4), mental (5, 6, 7). Affichage indicatif.",
-    "dimensions": {
-      "fierte": "Ce dont le type est fier (p. 17).",
-      "compulsion": "Ce que le type cherche à éviter (p. 18-19).",
-      "situation": "Mise en situation de la vie quotidienne (travail, famille, couple, amis, parentalité, conflits) formulée pour ne pas laisser deviner le type visé."
-    }
+    "poids": "Chaque question a un objet « poids » : {type: coefficient}. La réponse (0 à 4) est multipliée par chaque coefficient et ajoutée au score du type correspondant. Type principal de la question : 1 (2 pour la question « compulsion », car c'est elle qui détermine le type selon le livre, p. 29). Types que la réponse contredit : −0,5 (confusions décrites p. 61-64). Les 3 questions « amour » (relations amoureuses) donnent ou retirent des points à chacun des 9 types (de −1 à +1).",
+    "pourcentage": "Score de chaque type ramené entre 0 et 100 % selon son minimum et son maximum possibles avec les poids actuels (ils diffèrent légèrement d'un type à l'autre depuis l'ajout des questions « amour »).",
+    "aile": "Score ajusté = pourcentage + 0,5 × pourcentage de la meilleure aile (le type voisin sur le cercle qui a le plus haut pourcentage). Un vrai type est soutenu par l'une de ses ailes.",
+    "type_principal": "Le type au score ajusté le plus élevé.",
+    "departage": "La question de départage (bloc « departage ») s'affiche si le 2e type est à 15 points ou moins du 1er, ou à 25 points ou moins quand les deux sont reliés par une flèche. Elle propose les types concernés (jusqu'à 3 : tous ceux à 15 points ou moins du 1er, ou les deux types reliés par la flèche). Le type choisi devient le type principal.",
+    "fiabilite": "net : pas de départage et écart de plus de 25 points avec le 2e ; à confirmer : pas de départage mais écart de 25 points ou moins ; départagé : la personne a choisi via la question.",
+    "centre": "Moyenne des pourcentages des trois types de chaque centre : instinctif (8, 9, 1), émotionnel (2, 3, 4), mental (5, 6, 7). Affichage indicatif."
   },
   "departage": {
-    "quand": "Quand plusieurs types ont le même score le plus élevé.",
+    "quand": "Quand les premiers types sont trop proches ou reliés par une flèche (voir calcul.departage).",
     "questions": [
       "Quelle situation essaies-tu d'éviter le plus souvent ?",
       "Quel sentiment cherches-tu le plus à éviter ?"
     ],
-    "consigne": "Pose une seule de ces deux questions (au choix, ou tirée au hasard) et ne propose que les options des types ex æquo. Le type choisi devient le type principal.",
+    "consigne": "Pose une seule de ces deux questions (tirée au hasard) et ne propose que les options des types concernés. Le type choisi devient le type principal.",
     "options": {
       "1": {
         "titre": "L'imperfection",
@@ -304,6 +448,20 @@
         "titre": "Le conflit",
         "texte": "Être séparé·e, rejeté·e ou perdre le lien avec les autres."
       }
+    }
+  },
+  "fleches": {
+    "description": "Flèches de désintégration (stress) du livre, p. 21-23. Deux types reliés dans un sens ou dans l'autre peuvent se confondre.",
+    "desintegration": {
+      "1": 4,
+      "2": 8,
+      "3": 9,
+      "4": 2,
+      "5": 7,
+      "6": 3,
+      "7": 1,
+      "8": 5,
+      "9": 6
     }
   }
 }

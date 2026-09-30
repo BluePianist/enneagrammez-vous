@@ -22,7 +22,7 @@ export function genererPdf(profil) {
     y += lignes.length * taille * 0.42 + espace;
   };
 
-  const barres = (lignes, max) => {
+  const barres = (lignes) => {
     for (const l of lignes) {
       doc.setFont('helvetica', l.actif ? 'bold' : 'normal');
       doc.setFontSize(10);
@@ -31,11 +31,11 @@ export function genererPdf(profil) {
       const x = marge + 62, lb = largeur - 62 - 16;
       doc.setFillColor(...FOND);
       doc.roundedRect(x, y - 3.2, lb, 4, 1, 1, 'F');
-      if (l.score > 0) {
+      if (l.pourcentage > 0) {
         doc.setFillColor(...(l.actif ? PRUNE : ROSE));
-        doc.roundedRect(x, y - 3.2, Math.max(2, lb * l.score / max), 4, 1, 1, 'F');
+        doc.roundedRect(x, y - 3.2, Math.max(2, lb * l.pourcentage / 100), 4, 1, 1, 'F');
       }
-      doc.text(`${l.score}/${max}`, marge + largeur, y, { align: 'right' });
+      doc.text(`${l.pourcentage} %`, marge + largeur, y, { align: 'right' });
       y += 7;
     }
   };
@@ -61,11 +61,11 @@ export function genererPdf(profil) {
 
   y += 3;
   texte('Scores par type', { taille: 13, gras: true, couleur: PRUNE, espace: 4 });
-  barres(profil.classement.map(l => ({ libelle: `${l.type}. ${l.nom}`, score: l.score, actif: l.type === type })), profil.maxType);
+  barres(profil.classement.map(l => ({ libelle: `${l.type}. ${l.nom}`, pourcentage: l.pourcentage, actif: l.type === type })));
 
   y += 3;
   texte('Centres (indicatif)', { taille: 13, gras: true, couleur: PRUNE, espace: 4 });
-  barres(profil.centres.map(c => ({ libelle: c.nom, score: c.score })), profil.maxCentre);
+  barres(profil.centres.map(c => ({ libelle: c.nom, pourcentage: c.pourcentage })));
 
   y = 297 - 22;
   texte('Ce résultat est indicatif : seule une réflexion personnelle permet de confirmer son type.', { taille: 8, couleur: GRIS, espace: 0.5 });

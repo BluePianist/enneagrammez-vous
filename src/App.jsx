@@ -133,7 +133,7 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
     return (
       <section className="carte">
         <h1>Encore une question</h1>
-        <p>Tes réponses placent plusieurs types à égalité. Pour les départager :</p>
+        <p>Tes réponses placent plusieurs types très près l'un de l'autre. Pour les départager :</p>
         <h2 className="affirmation">{question}</h2>
         <div className="echelle">
           {options.map(o => (
@@ -180,7 +180,7 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
             <li key={l.type} className={l.type === type ? 'actif' : ''}>
               <span className="barre-libelle">{l.type}. {l.nom}</span>
               <span className="barre-fond"><span className="barre" style={{ width: `${l.pourcentage}%` }} /></span>
-              <span className="barre-valeur">{l.score}/{profil.maxType}</span>
+              <span className="barre-valeur">{l.pourcentage} %</span>
             </li>
           ))}
         </ul>
@@ -190,7 +190,7 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
             <li key={c.nom}>
               <span className="barre-libelle">{c.nom}</span>
               <span className="barre-fond"><span className="barre" style={{ width: `${c.pourcentage}%` }} /></span>
-              <span className="barre-valeur">{c.score}/{profil.maxCentre}</span>
+              <span className="barre-valeur">{c.pourcentage} %</span>
             </li>
           ))}
         </ul>
