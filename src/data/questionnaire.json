@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "titre": "Enneagrammez-vous : questionnaire maison",
+  "source": "Inspiré de F. et P. Chabreuil, « L'ennéagramme, dynamique de connaissance et d'évolution » (9edce.pdf) : fiertés des types (p. 17), compulsions d'évitement (p. 18-19), confusions entre types (p. 61-64).",
+  "consigne": "Pour chaque affirmation, indiquez à quelle fréquence elle vous correspond. Pensez à la personne que vous êtes vraiment depuis longtemps, pas à celle que vous aimeriez être.",
+  "echelle": [
+    { "valeur": 0, "libelle": "Pas du tout" },
+    { "valeur": 1, "libelle": "Quelques fois" },
+    { "valeur": 2, "libelle": "Neutre" },
+    { "valeur": 3, "libelle": "Souvent" },
+    { "valeur": 4, "libelle": "Toujours" }
+  ],
+  "types": {
+    "1": { "nom": "Le Perfectionniste", "fierte": "Je suis droit, je suis travailleur", "evite": "La colère", "passion": "Colère", "centre": "instinctif" },
+    "2": { "nom": "L'Altruiste", "fierte": "J'aime, j'aide", "evite": "La reconnaissance de ses propres besoins", "passion": "Orgueil", "centre": "emotionnel" },
+    "3": { "nom": "Le Battant", "fierte": "Je réussis, je suis efficace", "evite": "L'échec", "passion": "Mensonge", "centre": "emotionnel" },
+    "4": { "nom": "Le Romantique", "fierte": "Je suis différent, je suis sensible", "evite": "La banalité", "passion": "Envie", "centre": "emotionnel" },
+    "5": { "nom": "L'Observateur", "fierte": "Je sais, je comprends", "evite": "Le vide intérieur", "passion": "Avarice", "centre": "mental" },
+    "6": { "nom": "Le Loyal", "fierte": "Je suis loyal, je fais mon devoir", "evite": "La déviance", "passion": "Peur", "centre": "mental" },
+    "7": { "nom": "L'Épicurien", "fierte": "Je suis optimiste, je suis heureux", "evite": "La souffrance", "passion": "Gourmandise", "centre": "mental" },
+    "8": { "nom": "Le Chef", "fierte": "Je suis fort, je suis juste", "evite": "La faiblesse", "passion": "Excès", "centre": "instinctif" },
+    "9": { "nom": "Le Médiateur", "fierte": "Je suis facile à vivre, je suis bien, calme", "evite": "Le conflit", "passion": "Paresse", "centre": "instinctif" }
+  },
+  "questions": [
+    { "id": 1,  "type": 1, "dimension": "fierte",     "texte": "Je tiens à faire les choses correctement et avec rigueur, et un travail imparfait me laisse insatisfait(e)." },
+    { "id": 2,  "type": 5, "dimension": "fierte",     "texte": "Avant d'agir ou de m'impliquer, j'ai besoin de comprendre à fond, en observant et en m'informant." },
+    { "id": 3,  "type": 9, "dimension": "fierte",     "texte": "On me trouve calme et facile à vivre, et je comprends sans effort le point de vue de chacun." },
+    { "id": 4,  "type": 3, "dimension": "fierte",     "texte": "Je me fixe des objectifs concrets et je m'organise efficacement pour les atteindre." },
+    { "id": 5,  "type": 7, "dimension": "fierte",     "texte": "Je vois le bon côté des choses et j'aime avoir plein de projets et d'activités plaisantes en cours." },
+    { "id": 6,  "type": 2, "dimension": "fierte",     "texte": "Je devine ce dont les autres ont besoin et je me rends disponible pour les aider, même sans qu'ils le demandent." },
+    { "id": 7,  "type": 6, "dimension": "fierte",     "texte": "La loyauté envers mes proches ou mon groupe, et le fait de remplir mon devoir, comptent énormément pour moi." },
+    { "id": 8,  "type": 4, "dimension": "fierte",     "texte": "Je ressens mes émotions de façon intense et j'ai besoin d'exprimer ce qui me rend unique." },
+    { "id": 9,  "type": 8, "dimension": "fierte",     "texte": "Je prends les choses en main, je dis franchement ce que je pense et je défends ce qui me semble juste." },
+    { "id": 10, "type": 4, "dimension": "compulsion", "texte": "J'ai le sentiment que les autres ne me comprennent pas vraiment, et ce qui est banal ou ordinaire me pèse." },
+    { "id": 11, "type": 8, "dimension": "compulsion", "texte": "Je refuse de montrer mes faiblesses et je tiens à garder le contrôle, quitte à en souffrir." },
+    { "id": 12, "type": 2, "dimension": "compulsion", "texte": "J'ai du mal à reconnaître mes propres besoins ou à demander de l'aide pour moi-même." },
+    { "id": 13, "type": 6, "dimension": "compulsion", "texte": "J'anticipe ce qui pourrait mal tourner, je doute, et je me sens plus en sécurité quand les règles et le cadre sont clairs." },
+    { "id": 14, "type": 1, "dimension": "compulsion", "texte": "Je retiens ma colère ou mon agacement, parce que l'exprimer ne me semble pas correct." },
+    { "id": 15, "type": 5, "dimension": "compulsion", "texte": "Quand je ne comprends pas une situation, je préfère me retirer pour réfléchir plutôt que de m'y engager, et je protège mon temps et mon énergie." },
+    { "id": 16, "type": 9, "dimension": "compulsion", "texte": "J'évite les conflits, quitte à mettre mes propres envies de côté ou à repousser des décisions." },
+    { "id": 17, "type": 3, "dimension": "compulsion", "texte": "L'idée d'échouer, ou de paraître en échec aux yeux des autres, m'est très difficile à supporter." },
+    { "id": 18, "type": 7, "dimension": "compulsion", "texte": "Face à une situation pénible ou triste, je passe vite à autre chose de plus agréable." }
+  ],
+  "calcul": {
+    "score_par_type": "Somme des réponses (0 à 4) des 2 questions du type. Score de 0 à 8 ; pourcentage = score / 8 × 100.",
+    "type_principal": "Le type au score le plus élevé.",
+    "departage": [
+      "En cas d'égalité, le type dont la question « compulsion » a la réponse la plus haute l'emporte : selon le livre, c'est la compulsion d'évitement qui détermine le type, pas les comportements (p. 29 et 62).",
+      "Si l'égalité persiste, le résultat liste les types ex æquo et propose de départager avec la question du livre : « si je ne peux éviter qu'une des deux choses, laquelle j'évite ? »"
+    ],
+    "fiabilite": "Écart entre le 1er et le 2e score : 3 points ou plus = net ; 0 à 2 points = à confirmer ; égalité non résolue par le départage = ex æquo.",
+    "aile": "Parmi les deux types voisins du type principal sur le cercle (le 1 a pour voisins le 9 et le 2, le 9 a pour voisins le 8 et le 1), celui qui a le plus haut score. Égalité = pas d'aile dominante.",
+    "centre": "Somme des scores des trois types de chaque centre : instinctif (8, 9, 1), émotionnel (2, 3, 4), mental (5, 6, 7). Affichage indicatif."
+  }
+}
