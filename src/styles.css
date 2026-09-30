@@ -10,6 +10,7 @@
   --sur-accent: #3a1f28;
   --piste: #3a1f28;
   --barre: #c47a90;
+  --point: #ffc86b;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--texte);
   background: var(--fond);
@@ -133,7 +134,7 @@ h2:first-child { margin-top: 0; }
 .schema-noeud { fill: var(--accent); }
 .schema-chiffre { font-size: 22px; font-weight: 700; fill: var(--gris); }
 .schema-chiffre.actif { font-size: 28px; font-weight: 800; fill: var(--accent); }
-.schema-halo { fill: #fff; opacity: .28; }
-.schema-point { fill: #fff; stroke: var(--carte); stroke-width: 3; }
+.schema-halo { fill: var(--point); opacity: .3; }
+.schema-point { fill: var(--point); stroke: var(--carte); stroke-width: 3; }
 .schema-legende { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px; }
-.schema-pastille { width: 14px; height: 14px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px rgba(255, 255, 255, .28); }
+.schema-pastille { width: 14px; height: 14px; border-radius: 50%; background: var(--point); box-shadow: 0 0 0 4px rgba(255, 200, 107, .3); }
