@@ -1,8 +1,8 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "titre": "Enneagrammez-vous : questionnaire maison",
   "source": "Inspiré de F. et P. Chabreuil, « L'ennéagramme, dynamique de connaissance et d'évolution » (9edce.pdf) : fiertés des types (p. 17), compulsions d'évitement (p. 18-19), confusions entre types (p. 61-64).",
-  "consigne": "Pour chaque affirmation, indiquez à quelle fréquence elle vous correspond. Pensez à la personne que vous êtes vraiment depuis longtemps, pas à celle que vous aimeriez être.",
+  "consigne": "Pour chaque affirmation, indique à quelle fréquence elle te correspond. Pense à la personne que tu es vraiment depuis longtemps, pas à celle que tu aimerais être.",
   "echelle": [
     {
       "valeur": 0,
@@ -28,64 +28,55 @@
   "types": {
     "1": {
       "nom": "Le Perfectionniste",
-      "fierte": "Je suis droit, je suis travailleur",
-      "evite": "Vous cherchez avant tout à éviter la colère, la vôtre comme celle des autres. Pour cela, vous vous efforcez de faire parfaitement ce qui doit être fait. Mais comme rien n'est jamais tout à fait à la hauteur de vos exigences, une irritation s'installe, que vous gardez souvent pour vous.",
+      "fierte-evitement": "Tu es fier·e de ta capacité de travail, de ton honnêteté et de ta rigueur morale. Ce que tu cherches avant tout à éviter, c'est la colère, la tienne comme celle des autres. Pour cela, tu t'efforces de faire parfaitement ce qui doit être fait. Mais comme rien n'est jamais tout à fait à la hauteur de tes exigences, une irritation s'installe, que tu gardes souvent pour toi.",
       "passion": "Colère",
       "centre": "instinctif"
     },
     "2": {
       "nom": "L'Altruiste",
-      "fierte": "J'aime, j'aide",
-      "evite": "Vous cherchez avant tout à éviter de reconnaître vos propres besoins. Vous vous tournez spontanément vers ceux des autres, exprimés ou non, et vous êtes fier ou fière de pouvoir aider sans jamais avoir besoin d'aide. Au fond, vous espérez pourtant que ce que vous donnez soit reconnu.",
+      "fierte-evitement": "Tu es fier·e de l'amour et de l'aide chaleureuse que tu apportes aux autres. Ce que tu cherches avant tout à éviter, c'est de reconnaître tes propres besoins. Tu te tournes spontanément vers ceux des autres, exprimés ou non, et tu aimes pouvoir aider sans jamais avoir besoin d'aide. Au fond, tu espères pourtant que ce que tu donnes soit reconnu.",
       "passion": "Orgueil",
       "centre": "emotionnel"
     },
     "3": {
       "nom": "Le Battant",
-      "fierte": "Je réussis, je suis efficace",
-      "evite": "Vous cherchez avant tout à éviter l'échec. Vous avez presque toujours un objectif en cours et vous vous organisez pour réussir, car le succès vous semble la meilleure preuve de votre valeur. Il vous arrive d'endosser le rôle qu'on attend de vous au point d'oublier ce que vous ressentez vraiment.",
+      "fierte-evitement": "Tu es fier·e de ton efficacité et de tes réussites, surtout sur les plans professionnel et social. Ce que tu cherches avant tout à éviter, c'est l'échec. Tu as presque toujours un objectif en cours et tu t'organises pour réussir, car le succès te semble la meilleure preuve de ta valeur. Il t'arrive d'endosser le rôle qu'on attend de toi au point d'oublier ce que tu ressens vraiment.",
       "passion": "Mensonge",
       "centre": "emotionnel"
     },
     "4": {
       "nom": "Le Romantique",
-      "fierte": "Je suis différent, je suis sensible",
-      "evite": "Vous cherchez avant tout à éviter la banalité. Vous avez besoin d'être unique et de vivre des émotions intenses, et vous percevoir comme ordinaire vous est pénible. Cette sensibilité vous rend attentif ou attentive à la beauté, mais elle nourrit aussi le sentiment d'être incompris et une certaine mélancolie.",
+      "fierte-evitement": "Tu es fier·e de ta profonde sensibilité et de ton originalité. Ce que tu cherches avant tout à éviter, c'est la banalité. Tu as besoin d'être unique et de vivre des émotions intenses, et te sentir ordinaire t'est pénible. Cette sensibilité te rend attentif·ve à la beauté, mais elle nourrit aussi le sentiment d'être incompris·e et une certaine mélancolie.",
       "passion": "Envie",
       "centre": "emotionnel"
     },
     "5": {
       "nom": "L'Observateur",
-      "fierte": "Je sais, je comprends",
-      "evite": "Vous cherchez avant tout à éviter le vide intérieur. Vous comblez ce manque en accumulant connaissances et compréhension, et vous préférez observer avant de vous engager. Vous protégez votre temps, votre énergie et votre espace personnel, et les moments de retrait vous sont nécessaires pour vous ressourcer.",
+      "fierte-evitement": "Tu es fier·e de tes connaissances et de ta capacité à comprendre. Ce que tu cherches avant tout à éviter, c'est le vide intérieur. Tu combles ce manque en accumulant savoir et compréhension, et tu préfères observer avant de t'engager. Tu protèges ton temps, ton énergie et ton espace personnel, et les moments de retrait te sont nécessaires pour te ressourcer.",
       "passion": "Avarice",
       "centre": "mental"
     },
     "6": {
       "nom": "Le Loyal",
-      "fierte": "Je suis loyal, je fais mon devoir",
-      "evite": "Vous cherchez avant tout à éviter la déviance, c'est-à-dire sortir du cadre. Vous vous sentez en sécurité quand les règles sont claires et que vous appartenez à un groupe auquel vous restez fidèle. Le doute et l'anticipation de ce qui pourrait mal tourner vous accompagnent souvent, et vous oscillez entre confiance et méfiance envers l'autorité.",
+      "fierte-evitement": "Tu es fier·e de ta loyauté envers les autres et de remplir ton devoir. Ce que tu cherches avant tout à éviter, c'est la déviance, c'est-à-dire sortir du cadre. Tu te sens en sécurité quand les règles sont claires et que tu appartiens à un groupe auquel tu restes fidèle. Le doute et l'anticipation de ce qui pourrait mal tourner t'accompagnent souvent, et tu oscilles entre confiance et méfiance envers l'autorité.",
       "passion": "Peur",
       "centre": "mental"
     },
     "7": {
       "nom": "L'Épicurien",
-      "fierte": "Je suis optimiste, je suis heureux",
-      "evite": "Vous cherchez avant tout à éviter la souffrance, physique comme morale. Vous vous tournez vers ce qui est plaisant, multipliez les projets et les options, et voyez spontanément le bon côté des choses. Quand une situation devient pénible, vous avez tendance à passer rapidement à autre chose plutôt que de vous y attarder.",
+      "fierte-evitement": "Tu es fier·e de ton optimisme et de ta capacité à être gai·e et heureux·se. Ce que tu cherches avant tout à éviter, c'est la souffrance, physique comme morale. Tu te tournes vers ce qui est plaisant, tu multiplies les projets et les options, et tu vois spontanément le bon côté des choses. Quand une situation devient pénible, tu as tendance à passer vite à autre chose plutôt que de t'y attarder.",
       "passion": "Gourmandise",
       "centre": "mental"
     },
     "8": {
       "nom": "Le Protecteur",
-      "fierte": "Je suis fort, je suis juste",
-      "evite": "Vous cherchez avant tout à éviter la faiblesse. Vous tenez à garder le contrôle, à ne pas vous laisser dominer et à défendre ce qui vous semble juste, pour vous comme pour ceux que vous protégez. Vous mettez de côté les émotions qui vous rendraient vulnérable, et votre énergie peut vous pousser à agir avec excès.",
+      "fierte-evitement": "Tu es fier·e de ta force et de savoir faire respecter la justice. Ce que tu cherches avant tout à éviter, c'est la faiblesse. Tu tiens à garder le contrôle, à ne pas te laisser dominer et à défendre ce qui te semble juste, pour toi comme pour celles et ceux que tu protèges. Tu mets de côté les émotions qui te rendraient vulnérable, et ton énergie peut te pousser à agir avec excès.",
       "passion": "Excès",
       "centre": "instinctif"
     },
     "9": {
       "nom": "Le Médiateur",
-      "fierte": "Je suis facile à vivre, je suis bien, calme",
-      "evite": "Vous cherchez avant tout à éviter le conflit. Vous préservez votre paix intérieure et celle de votre entourage, quitte à mettre vos propres envies de côté et à repousser les décisions. Cette recherche d'harmonie fait de vous une personne apaisante, souvent précieuse pour réconcilier les autres, mais vous en oubliez parfois vos propres besoins et qualités.",
+      "fierte-evitement": "Tu es fier·e d'être facile à vivre, en paix et calme. Ce que tu cherches avant tout à éviter, c'est le conflit. Tu préserves ta paix intérieure et celle de ton entourage, quitte à mettre tes propres envies de côté et à repousser les décisions. Cette recherche d'harmonie fait de toi une personne apaisante, souvent précieuse pour réconcilier les autres, mais tu en oublies parfois tes propres besoins et qualités.",
       "passion": "Paresse",
       "centre": "instinctif"
     }
@@ -95,7 +86,7 @@
       "id": 1,
       "type": 1,
       "dimension": "fierte",
-      "texte": "Je tiens à faire les choses correctement et avec rigueur, et un travail imparfait me laisse insatisfait(e)."
+      "texte": "Je tiens à faire les choses correctement et avec rigueur, et un travail imparfait me laisse insatisfait·e."
     },
     {
       "id": 2,

@@ -54,7 +54,7 @@ export default function App() {
         )}
       </main>
       <footer className="pied">
-        Aucune donnée n'est enregistrée ni envoyée : vos réponses restent dans cet onglet et disparaissent quand vous le fermez.
+        Aucune donnée n'est enregistrée ni envoyée : tes réponses restent dans cet onglet et disparaissent quand tu le fermes.
       </footer>
     </div>
   );
@@ -63,8 +63,8 @@ export default function App() {
 function Accueil({ onCommencer }) {
   return (
     <section className="carte">
-      <h1>Découvrez votre type ennéagramme</h1>
-      <p>{QUESTIONS.length} affirmations, environ 7 minutes. À la fin, vous obtenez votre type principal, votre aile, et un récapitulatif à télécharger en PDF.</p>
+      <h1>Découvre ton type ennéagramme</h1>
+      <p>{QUESTIONS.length} affirmations, environ 7 minutes. À la fin, tu obtiens ton type principal, ton aile, et un récapitulatif à télécharger en PDF.</p>
       <p className="consigne">{questionnaire.consigne}</p>
       <button className="bouton principal" onClick={onCommencer}>Commencer le test</button>
       <p className="source">{questionnaire.source}</p>
@@ -118,8 +118,8 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
     return (
       <section className="carte">
         <h1>Encore une question</h1>
-        <p>Vos réponses placent plusieurs types à égalité. Pour les départager :</p>
-        <h2 className="affirmation">Si vous ne pouviez éviter qu'une seule de ces choses, laquelle éviteriez-vous ?</h2>
+        <p>Tes réponses placent plusieurs types à égalité. Pour les départager :</p>
+        <h2 className="affirmation">Si tu ne pouvais éviter qu'une seule de ces choses, laquelle éviterais-tu ?</h2>
         <div className="echelle">
           {resultat.exAequo.map(t => (
             <button key={t} className="choix" onClick={() => onChoisirType(t)}>
@@ -135,15 +135,14 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
   return (
     <>
       <section className="carte resultat">
-        <p className="surtitre">Votre type principal</p>
+        <p className="surtitre">Ton type principal</p>
         <div className="type-badge">{type}</div>
         <h1>{infos.nom}</h1>
         {aile && <p className="aile">Aile {aile} : {profil.nomAile} <span className="notation">({type}w{aile})</span></p>}
         {!aile && <p className="aile">Pas d'aile dominante</p>}
         <p className={`fiabilite fiabilite-${profil.fiabilite === 'net' ? 'net' : 'doute'}`}>{profil.texteFiabilite}</p>
-        <p className="evite">{infos.evite}</p>
+        <p className="portrait">{infos['fierte-evitement']}</p>
         <dl className="traits">
-          <div><dt>Fierté</dt><dd>« {infos.fierte} »</dd></div>
           <div><dt>Passion</dt><dd>{infos.passion}</dd></div>
           <div><dt>Centre</dt><dd>{profil.nomCentre}</dd></div>
         </dl>

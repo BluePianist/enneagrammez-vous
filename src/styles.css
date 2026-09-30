@@ -76,7 +76,7 @@ h2:first-child { margin-top: 0; }
 .fiabilite { font-size: .9rem; border-radius: 10px; padding: 10px 12px; }
 .fiabilite-net { background: #e7f4ea; color: #245c31; }
 .fiabilite-doute { background: #fdf1e2; color: #7a4a0c; }
-.evite { text-align: left; font-size: 1.02rem; margin: 16px 0 0; }
+.portrait { text-align: left; font-size: 1.02rem; margin: 16px 0 0; }
 .traits { text-align: left; margin: 16px 0 0; display: grid; gap: 12px; }
 .traits dt { font-size: .8rem; color: var(--gris); text-transform: uppercase; letter-spacing: .05em; }
 .traits dd { margin: 2px 0 0; font-weight: 500; }

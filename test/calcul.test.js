@@ -54,7 +54,8 @@ test('réponse manquante refusée', () => {
 
 test('libellés courts pour le départage', () => {
   assert.equal(eviteCourt(questionnaire.types[1]), 'La colère');
-  assert.equal(eviteCourt(questionnaire.types[2]), 'Reconnaître vos propres besoins');
+  assert.equal(eviteCourt(questionnaire.types[2]), 'Reconnaître tes propres besoins');
   assert.equal(eviteCourt(questionnaire.types[6]), 'La déviance');
+  for (const infos of Object.values(questionnaire.types)) assert.match(infos['fierte-evitement'], /éviter, c'est /);
   assert.equal(questionnaire.types[8].nom, 'Le Protecteur');
 });

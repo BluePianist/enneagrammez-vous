@@ -1,16 +1,17 @@
 import { calculerAile, NOMS_CENTRES } from './calcul.js';
 
 export const TEXTES_FIABILITE = {
-  net: 'Résultat net : votre type principal se détache de 4 points ou plus.',
-  'à confirmer': 'Résultat à confirmer : le 2e type est proche (0 à 3 points d\'écart). Il peut aussi vous correspondre.',
-  'ex æquo': 'Résultat ex æquo : plusieurs types restent à égalité, vous les avez départagés vous-même.'
+  net: 'Résultat net : ton type principal se détache de 4 points ou plus.',
+  'à confirmer': 'Résultat à confirmer : le 2e type est proche (0 à 3 points d\'écart). Il peut aussi te correspondre.',
+  'ex æquo': 'Résultat ex æquo : plusieurs types restent à égalité, tu les as départagés toi-même.'
 };
 
-// Version courte de ce qu'un type évite (« La colère »), tirée de la première phrase
-// du paragraphe « evite » : sert aux boutons de départage.
+// Version courte de ce qu'un type évite (« La colère »), tirée du paragraphe
+// « fierte-evitement » (« …à éviter, c'est la colère, … ») : sert aux boutons de départage.
 export function eviteCourt(infos) {
-  const m = infos.evite.match(/éviter (.+?)[,.]/);
-  const court = (m ? m[1] : infos.evite.split('.')[0]).replace(/^de /, '');
+  const texte = infos['fierte-evitement'];
+  const m = texte.match(/éviter, c'est (.+?)[,.]/);
+  const court = (m ? m[1] : infos.passion).replace(/^de /, '');
   return court.charAt(0).toUpperCase() + court.slice(1);
 }
 
