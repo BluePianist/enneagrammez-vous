@@ -133,7 +133,7 @@ h2:first-child { margin-top: 0; }
 .schema-noeud { fill: var(--accent); }
 .schema-chiffre { font-size: 22px; font-weight: 700; fill: var(--gris); }
 .schema-chiffre.actif { font-size: 28px; font-weight: 800; fill: var(--accent); }
-.schema-halo { fill: var(--accent); opacity: .25; }
-.schema-point { fill: var(--accent); stroke: var(--carte); stroke-width: 3; }
+.schema-halo { fill: #fff; opacity: .28; }
+.schema-point { fill: #fff; stroke: var(--carte); stroke-width: 3; }
 .schema-legende { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px; }
-.schema-pastille { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(242, 167, 186, .25); }
+.schema-pastille { width: 14px; height: 14px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px rgba(255, 255, 255, .28); }

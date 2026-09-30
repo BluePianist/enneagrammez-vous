@@ -66,8 +66,8 @@ export default function SchemaEnneagramme({ profil }) {
           );
         })}
 
-        <circle cx={p.x} cy={p.y} r="15" className="schema-halo" />
-        <circle cx={p.x} cy={p.y} r="9" className="schema-point" />
+        <circle cx={p.x} cy={p.y} r="18" className="schema-halo" />
+        <circle cx={p.x} cy={p.y} r="11" className="schema-point" />
       </svg>
       <figcaption className="schema-legende">
         <span className="schema-pastille" aria-hidden="true" />

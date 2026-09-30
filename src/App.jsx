@@ -3,6 +3,7 @@ import questionnaire from './data/questionnaire.json';
 import { calculerType, appliquerDepartage } from './lib/calcul.js';
 import { construireProfil } from './lib/profil.js';
 import SchemaEnneagramme from './components/SchemaEnneagramme.jsx';
+import { CREDITS } from './lib/credits.js';
 
 const QUESTIONS = questionnaire.questions;
 
@@ -72,7 +73,7 @@ function Accueil({ onCommencer }) {
       </p>
       <p className="consigne">{questionnaire.consigne}</p>
       <button className="bouton principal" onClick={onCommencer}>Commencer le test</button>
-      <p className="source">{questionnaire.source}</p>
+      <p className="source">{CREDITS}</p>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { jsPDF } from 'jspdf';
-import questionnaire from '../data/questionnaire.json';
+import { CREDITS } from './credits.js';
 
 const PRUNE = [71, 39, 49];
 const ROSE = [196, 122, 144];
@@ -69,7 +69,7 @@ export function genererPdf(profil) {
 
   y = 297 - 22;
   texte('Ce résultat est indicatif : seule une réflexion personnelle permet de confirmer son type.', { taille: 8, couleur: GRIS, espace: 0.5 });
-  texte(questionnaire.source, { taille: 8, couleur: GRIS, espace: 0 });
+  texte(CREDITS, { taille: 8, couleur: GRIS, espace: 0 });
 
   doc.save(`enneagramme-type-${type}.pdf`);
 }
