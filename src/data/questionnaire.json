@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "titre": "Enneagrammez-vous : questionnaire maison",
   "source": "Inspiré de F. et P. Chabreuil, « L'ennéagramme, dynamique de connaissance et d'évolution » (9edce.pdf) : fiertés des types (p. 17), compulsions d'évitement (p. 18-19), confusions entre types (p. 61-64).",
   "consigne": "Pour chaque affirmation, indique à quelle fréquence elle te correspond. Pense à la personne que tu es vraiment depuis longtemps, pas à celle que tu aimerais être.",
@@ -249,16 +249,61 @@
     "score_par_type": "Somme des réponses (0 à 4) des 3 questions du type (fierté, compulsion, situation). Score de 0 à 12 ; pourcentage = score / 12 × 100.",
     "type_principal": "Le type au score le plus élevé.",
     "departage": [
-      "En cas d'égalité, le type dont la question « compulsion » a la réponse la plus haute l'emporte : selon le livre, c'est la compulsion d'évitement qui détermine le type, pas les comportements (p. 29 et 62).",
-      "Si l'égalité persiste, le résultat liste les types ex æquo et propose de départager avec la question du livre : « si je ne peux éviter qu'une des deux choses, laquelle j'évite ? »"
+      "En cas d'égalité entre plusieurs types au score le plus élevé, on pose la question de départage (voir « departage ») en ne proposant que les options des types ex æquo. Le type choisi devient le type principal."
     ],
-    "fiabilite": "Écart entre le 1er et le 2e score : 4 points ou plus = net ; 0 à 3 points = à confirmer ; égalité non résolue par le départage = ex æquo.",
+    "fiabilite": "Écart entre le 1er et le 2e score : 4 points ou plus = net ; 1 à 3 points = à confirmer ; égalité = départagé par la question (fiabilité « départagé »).",
     "aile": "Parmi les deux types voisins du type principal sur le cercle (le 1 a pour voisins le 9 et le 2, le 9 a pour voisins le 8 et le 1), celui qui a le plus haut score. Égalité = pas d'aile dominante.",
     "centre": "Somme des scores des trois types de chaque centre : instinctif (8, 9, 1), émotionnel (2, 3, 4), mental (5, 6, 7). Affichage indicatif.",
     "dimensions": {
       "fierte": "Ce dont le type est fier (p. 17).",
       "compulsion": "Ce que le type cherche à éviter (p. 18-19).",
       "situation": "Mise en situation de la vie quotidienne (travail, famille, couple, amis, parentalité, conflits) formulée pour ne pas laisser deviner le type visé."
+    }
+  },
+  "departage": {
+    "quand": "Quand plusieurs types ont le même score le plus élevé.",
+    "questions": [
+      "Quelle situation essaies-tu d'éviter le plus souvent ?",
+      "Quel sentiment cherches-tu le plus à éviter ?"
+    ],
+    "consigne": "Pose une seule de ces deux questions (au choix, ou tirée au hasard) et ne propose que les options des types ex æquo. Le type choisi devient le type principal.",
+    "options": {
+      "1": {
+        "titre": "L'imperfection",
+        "texte": "Ne pas être à la hauteur ou faire mal les choses."
+      },
+      "2": {
+        "titre": "Le rejet",
+        "texte": "Ne pas être aimé·e ou ne pas compter pour les autres."
+      },
+      "3": {
+        "titre": "L'échec",
+        "texte": "Ne pas réussir ou ne pas avoir de valeur."
+      },
+      "4": {
+        "titre": "Le vide",
+        "texte": "Être ordinaire, sans identité ou sans profondeur."
+      },
+      "5": {
+        "titre": "L'incompétence",
+        "texte": "Être démuni·e ou ne pas avoir les ressources nécessaires."
+      },
+      "6": {
+        "titre": "L'insécurité",
+        "texte": "Être dans le doute ou ne pas savoir sur quoi compter."
+      },
+      "7": {
+        "titre": "La souffrance",
+        "texte": "Être limité·e, frustré·e ou coincé·e dans une situation."
+      },
+      "8": {
+        "titre": "La faiblesse",
+        "texte": "Être vulnérable, dépendant·e ou perdre le contrôle."
+      },
+      "9": {
+        "titre": "Le conflit",
+        "texte": "Être séparé·e, rejeté·e ou perdre le lien avec les autres."
+      }
     }
   }
 }

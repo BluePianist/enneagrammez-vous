@@ -85,6 +85,9 @@ h2:first-child { margin-top: 0; }
   background: var(--piste); color: var(--texte); transition: border-color .15s;
 }
 .choix:hover { border-color: var(--accent); }
+.choix-titre, .choix-texte { display: block; }
+.choix-titre { color: var(--accent); margin-bottom: 2px; }
+.choix-texte { font-size: .92rem; color: var(--gris); }
 .choix:focus-visible, .bouton:focus-visible, .logo:focus-visible, .point:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
 .resultat { text-align: center; }

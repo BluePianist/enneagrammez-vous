@@ -1,26 +1,16 @@
-import { calculerAile, NOMS_CENTRES } from './calcul.js';
+import { NOMS_CENTRES } from './calcul.js';
 
 export const TEXTES_FIABILITE = {
   net: 'Résultat net : ton type principal se détache de 4 points ou plus.',
-  'à confirmer': 'Résultat à confirmer : le 2e type est proche (0 à 3 points d\'écart). Il peut aussi te correspondre.',
-  'ex æquo': 'Résultat ex æquo : plusieurs types restent à égalité, tu les as départagés toi-même.'
+  'à confirmer': 'Résultat à confirmer : le 2e type est proche (moins de 4 points d\'écart). Il peut aussi te correspondre.',
+  départagé: 'Résultat départagé : plusieurs types étaient à égalité, tu as choisi celui qui te correspond le mieux.'
 };
 
-// Version courte de ce qu'un type évite (« La colère »), tirée du paragraphe
-// « fierte-evitement » (« …à éviter, c'est la colère, … ») : sert aux boutons de départage.
-export function eviteCourt(infos) {
-  const texte = infos['fierte-evitement'];
-  const m = texte.match(/éviter, c'est (.+?)[,.]/);
-  const court = (m ? m[1] : infos.passion).replace(/^de /, '');
-  return court.charAt(0).toUpperCase() + court.slice(1);
-}
-
-// Assemble ce qu'on affiche (écran et PDF) à partir du résultat du calcul
-// et, en cas d'ex æquo, du type choisi par la personne.
-export function construireProfil(questionnaire, resultat, typeChoisi) {
-  const type = resultat.typePrincipal ?? typeChoisi ?? null;
+// Assemble ce qu'on affiche (écran et PDF) à partir du résultat final du calcul
+// (après appliquerDepartage en cas d'ex æquo). Renvoie null tant qu'il reste à départager.
+export function construireProfil(questionnaire, resultat) {
+  const { typePrincipal: type, aile } = resultat;
   if (type == null) return null;
-  const aile = resultat.typePrincipal != null ? resultat.aile : calculerAile(resultat.scores, type);
   const infos = questionnaire.types[type];
   const second = resultat.classement.find(t => t !== type);
   return {

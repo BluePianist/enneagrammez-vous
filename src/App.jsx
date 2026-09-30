@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import questionnaire from './data/questionnaire.json';
-import { calculerType } from './lib/calcul.js';
-import { construireProfil, eviteCourt } from './lib/profil.js';
+import { calculerType, appliquerDepartage } from './lib/calcul.js';
+import { construireProfil } from './lib/profil.js';
 
 const QUESTIONS = questionnaire.questions;
 
@@ -102,8 +102,13 @@ function Question({ index, valeur, onRepondre, onPrecedent }) {
 }
 
 function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
-  const resultat = useMemo(() => calculerType(questionnaire, reponses), [reponses]);
-  const profil = useMemo(() => construireProfil(questionnaire, resultat, typeChoisi), [resultat, typeChoisi]);
+  // La question de départage est tirée au hasard une seule fois par jeu de réponses.
+  const brut = useMemo(() => calculerType(questionnaire, reponses), [reponses]);
+  const resultat = useMemo(
+    () => (typeChoisi == null ? brut : appliquerDepartage(brut, typeChoisi)),
+    [brut, typeChoisi]
+  );
+  const profil = useMemo(() => construireProfil(questionnaire, resultat), [resultat]);
   const [pdfEnCours, setPdfEnCours] = useState(false);
 
   const telecharger = async () => {
@@ -118,15 +123,17 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
   };
 
   if (!profil) {
+    const { question, options } = brut.questionDepartage;
     return (
       <section className="carte">
         <h1>Encore une question</h1>
         <p>Tes réponses placent plusieurs types à égalité. Pour les départager :</p>
-        <h2 className="affirmation">Si tu ne pouvais éviter qu'une seule de ces choses, laquelle éviterais-tu ?</h2>
+        <h2 className="affirmation">{question}</h2>
         <div className="echelle">
-          {resultat.exAequo.map(t => (
-            <button key={t} className="choix" onClick={() => onChoisirType(t)}>
-              {eviteCourt(questionnaire.types[t])}
+          {options.map(o => (
+            <button key={o.type} className="choix" onClick={() => onChoisirType(o.type)}>
+              <strong className="choix-titre">{o.titre}</strong>
+              <span className="choix-texte">{o.texte}</span>
             </button>
           ))}
         </div>
