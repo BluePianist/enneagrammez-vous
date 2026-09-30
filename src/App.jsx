@@ -82,14 +82,17 @@ function Question({ index, valeur, onRepondre, onPrecedent }) {
       </div>
       <p className="compteur">Question {index + 1} sur {QUESTIONS.length}</p>
       <h2 className="affirmation">{q.texte}</h2>
-      <div className="echelle">
+      <div className="points" role="radiogroup" aria-label="Ta réponse">
         {questionnaire.echelle.map(e => (
           <button
             key={e.valeur}
-            className={`choix${valeur === e.valeur ? ' choisi' : ''}`}
+            role="radio"
+            aria-checked={valeur === e.valeur}
+            className={`point${valeur === e.valeur ? ' choisi' : ''}`}
             onClick={() => onRepondre(e.valeur)}
           >
-            {e.libelle}
+            <span className="point-rond" aria-hidden="true" />
+            <span className="point-libelle">{e.libelle}</span>
           </button>
         ))}
       </div>

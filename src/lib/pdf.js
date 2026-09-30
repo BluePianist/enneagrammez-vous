@@ -1,10 +1,10 @@
 import { jsPDF } from 'jspdf';
 import questionnaire from '../data/questionnaire.json';
 
-const PRUNE = [91, 42, 94];
-const ROSE = [192, 102, 138];
+const PRUNE = [71, 39, 49];
+const ROSE = [196, 122, 144];
 const GRIS = [110, 110, 110];
-const FOND = [238, 230, 238];
+const FOND = [240, 230, 234];
 
 // Génère le récapitulatif dans le navigateur et lance le téléchargement.
 export function genererPdf(profil) {
