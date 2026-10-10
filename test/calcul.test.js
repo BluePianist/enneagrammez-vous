@@ -9,13 +9,24 @@ const repondre = (f) => Object.fromEntries(questionnaire.questions.map(q => [q.i
 // Répond 4 aux questions des types listés, 0 ailleurs (questions de couple comprises).
 const profil = (valeurs) => repondre(q => (q.dimension === 'amour' ? 0 : valeurs[q.type] ?? 0));
 
-test('30 questions, 3 par type plus 3 de couple, avec des poids', () => {
-  assert.equal(questionnaire.questions.length, 30);
+test('57 questions : 6 par type (dont 3 « centre ») plus 3 de couple, avec des poids', () => {
+  assert.equal(questionnaire.questions.length, 57);
   for (let t = 1; t <= 9; t++) {
-    assert.equal(questionnaire.questions.filter(q => q.type === t && q.dimension !== 'amour').length, 3);
+    assert.equal(questionnaire.questions.filter(q => q.type === t && q.dimension !== 'amour').length, 6);
+    assert.equal(questionnaire.questions.filter(q => q.type === t && q.dimension === 'centre').length, 3);
   }
   assert.equal(questionnaire.questions.filter(q => q.dimension === 'amour').length, 3);
   for (const q of questionnaire.questions) assert.ok(q.poids && Object.keys(q.poids).length > 0);
+});
+
+test('échelle de points −3, −1, 0, +1, +3', () => {
+  assert.deepEqual(questionnaire.echelle.map(e => e.points), [-3, -1, 0, 1, 3]);
+  // Une réponse « toujours » pèse trois fois plus qu'une réponse « souvent ».
+  const neutre = calculerType(questionnaire, repondre(() => 2));
+  const souvent = calculerType(questionnaire, repondre(q => (q.id === 14 ? 3 : 2)));
+  const toujours = calculerType(questionnaire, repondre(q => (q.id === 14 ? 4 : 2)));
+  assert.equal(souvent.scores[1] - neutre.scores[1], 2);
+  assert.equal(toujours.scores[1] - neutre.scores[1], 6);
 });
 
 test('type net avec aile, pourcentages entre 0 et 100', () => {
@@ -36,7 +47,7 @@ test('une réponse retire des points aux types qu\'elle contredit', () => {
   const sans = calculerType(questionnaire, repondre(() => 0));
   const avec = calculerType(questionnaire, repondre(q => (q.id === 14 ? 4 : 0)));
   assert.ok(avec.scores[8] < sans.scores[8]);
-  assert.equal(avec.scores[1], 8);
+  assert.equal(avec.scores[1] - sans.scores[1], 12);
 });
 
 test('types proches : question de départage avec jusqu\'à 3 options', () => {
