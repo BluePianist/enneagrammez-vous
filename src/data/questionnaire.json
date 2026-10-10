@@ -6,23 +6,28 @@
   "echelle": [
     {
       "valeur": 0,
-      "libelle": "Pas du tout"
+      "libelle": "Pas du tout",
+      "points": -3
     },
     {
       "valeur": 1,
-      "libelle": "Quelques fois"
+      "libelle": "Quelques fois",
+      "points": -1
     },
     {
       "valeur": 2,
-      "libelle": "Neutre"
+      "libelle": "Neutre",
+      "points": 0
     },
     {
       "valeur": 3,
-      "libelle": "Souvent"
+      "libelle": "Souvent",
+      "points": 1
     },
     {
       "valeur": 4,
-      "libelle": "Toujours"
+      "libelle": "Toujours",
+      "points": 3
     }
   ],
   "types": {
@@ -393,16 +398,260 @@
         "8": 0.5,
         "9": -0.5
       }
+    },
+    {
+      "id": 31,
+      "type": 8,
+      "dimension": "centre",
+      "texte": "Quand quelque chose ne me convient pas, je le dis tout de suite.",
+      "poids": {
+        "8": 1
+      }
+    },
+    {
+      "id": 32,
+      "type": 2,
+      "dimension": "centre",
+      "texte": "Ça me fait plaisir qu'on me remercie de mon aide.",
+      "poids": {
+        "2": 1
+      }
+    },
+    {
+      "id": 33,
+      "type": 5,
+      "dimension": "centre",
+      "texte": "Face à un problème, je prends d'abord du recul pour l'analyser.",
+      "poids": {
+        "5": 1
+      }
+    },
+    {
+      "id": 34,
+      "type": 8,
+      "dimension": "centre",
+      "texte": "Me sentir contrôlé·e me met mal à l'aise.",
+      "poids": {
+        "8": 1
+      }
+    },
+    {
+      "id": 35,
+      "type": 2,
+      "dimension": "centre",
+      "texte": "Je suis blessé·e quand je me sens inutile.",
+      "poids": {
+        "2": 1
+      }
+    },
+    {
+      "id": 36,
+      "type": 5,
+      "dimension": "centre",
+      "texte": "Ça me rassure d'en savoir assez sur un sujet.",
+      "poids": {
+        "5": 1
+      }
+    },
+    {
+      "id": 37,
+      "type": 8,
+      "dimension": "centre",
+      "texte": "On dit souvent de moi que je suis direct·e.",
+      "poids": {
+        "8": 1
+      }
+    },
+    {
+      "id": 38,
+      "type": 2,
+      "dimension": "centre",
+      "texte": "Dans une relation, j'ai tendance à m'occuper beaucoup de l'autre.",
+      "poids": {
+        "2": 1
+      }
+    },
+    {
+      "id": 39,
+      "type": 5,
+      "dimension": "centre",
+      "texte": "Quand je m'inquiète, je me retire pour réfléchir.",
+      "poids": {
+        "5": 1
+      }
+    },
+    {
+      "id": 40,
+      "type": 9,
+      "dimension": "centre",
+      "texte": "Quand quelque chose ne me convient pas, je laisse passer pour garder la paix.",
+      "poids": {
+        "9": 1
+      }
+    },
+    {
+      "id": 41,
+      "type": 3,
+      "dimension": "centre",
+      "texte": "Ça me fait plaisir qu'on reconnaisse ma réussite.",
+      "poids": {
+        "3": 1
+      }
+    },
+    {
+      "id": 42,
+      "type": 6,
+      "dimension": "centre",
+      "texte": "Face à un problème, je pense d'abord à ce qui pourrait mal tourner.",
+      "poids": {
+        "6": 1
+      }
+    },
+    {
+      "id": 43,
+      "type": 9,
+      "dimension": "centre",
+      "texte": "Une dispute qui éclate me met mal à l'aise.",
+      "poids": {
+        "9": 1
+      }
+    },
+    {
+      "id": 44,
+      "type": 3,
+      "dimension": "centre",
+      "texte": "Je suis blessé·e quand j'ai l'air d'échouer.",
+      "poids": {
+        "3": 1
+      }
+    },
+    {
+      "id": 45,
+      "type": 6,
+      "dimension": "centre",
+      "texte": "Ça me rassure de pouvoir compter sur quelqu'un.",
+      "poids": {
+        "6": 1
+      }
+    },
+    {
+      "id": 46,
+      "type": 9,
+      "dimension": "centre",
+      "texte": "On dit souvent de moi que je suis conciliant·e.",
+      "poids": {
+        "9": 1
+      }
+    },
+    {
+      "id": 47,
+      "type": 3,
+      "dimension": "centre",
+      "texte": "Dans une relation, j'ai tendance à montrer ma meilleure image.",
+      "poids": {
+        "3": 1
+      }
+    },
+    {
+      "id": 48,
+      "type": 6,
+      "dimension": "centre",
+      "texte": "Quand je m'inquiète, j'en parle pour être rassuré·e.",
+      "poids": {
+        "6": 1
+      }
+    },
+    {
+      "id": 49,
+      "type": 1,
+      "dimension": "centre",
+      "texte": "Quand quelque chose ne me convient pas, je me retiens, mais ça m'agace.",
+      "poids": {
+        "1": 1
+      }
+    },
+    {
+      "id": 50,
+      "type": 4,
+      "dimension": "centre",
+      "texte": "Ça me fait plaisir qu'on comprenne qui je suis vraiment.",
+      "poids": {
+        "4": 1
+      }
+    },
+    {
+      "id": 51,
+      "type": 7,
+      "dimension": "centre",
+      "texte": "Face à un problème, je cherche vite une solution.",
+      "poids": {
+        "7": 1
+      }
+    },
+    {
+      "id": 52,
+      "type": 1,
+      "dimension": "centre",
+      "texte": "Une erreur que j'aurais pu éviter me met mal à l'aise.",
+      "poids": {
+        "1": 1
+      }
+    },
+    {
+      "id": 53,
+      "type": 4,
+      "dimension": "centre",
+      "texte": "Je suis blessé·e quand on me traite comme tout le monde.",
+      "poids": {
+        "4": 1
+      }
+    },
+    {
+      "id": 54,
+      "type": 7,
+      "dimension": "centre",
+      "texte": "Ça me rassure d'avoir plein de possibilités.",
+      "poids": {
+        "7": 1
+      }
+    },
+    {
+      "id": 55,
+      "type": 1,
+      "dimension": "centre",
+      "texte": "On dit souvent de moi que je suis exigeant·e.",
+      "poids": {
+        "1": 1
+      }
+    },
+    {
+      "id": 56,
+      "type": 4,
+      "dimension": "centre",
+      "texte": "Dans une relation, j'ai tendance à chercher un lien intense.",
+      "poids": {
+        "4": 1
+      }
+    },
+    {
+      "id": 57,
+      "type": 7,
+      "dimension": "centre",
+      "texte": "Quand je m'inquiète, je me change les idées.",
+      "poids": {
+        "7": 1
+      }
     }
   ],
   "calcul": {
-    "poids": "Chaque question a un objet « poids » : {type: coefficient}. La réponse (0 à 4) est multipliée par chaque coefficient et ajoutée au score du type correspondant. Type principal de la question : 1 (2 pour la question « compulsion », car c'est elle qui détermine le type selon le livre, p. 29). Types que la réponse contredit : −0,5 (confusions décrites p. 61-64). Les 3 questions « amour » (relations amoureuses) donnent ou retirent des points à chacun des 9 types (de −1 à +1).",
-    "pourcentage": "Score de chaque type ramené entre 0 et 100 % selon son minimum et son maximum possibles avec les poids actuels (ils diffèrent légèrement d'un type à l'autre depuis l'ajout des questions « amour »).",
+    "poids": "Chaque question a un objet « poids » : {type: coefficient}. La réponse (0 à 4) est multipliée par chaque coefficient et ajoutée au score du type correspondant. Type principal de la question : 1 (2 pour la question « compulsion », car c'est elle qui détermine le type selon le livre, p. 29). Types que la réponse contredit : −0,5 (confusions décrites p. 61-64). Les 3 questions « amour » (relations amoureuses) donnent ou retirent des points à chacun des 9 types (de −1 à +1). Les 27 questions « centre » (Q31 à Q57) comptent +1 pour leur seul type.",
+    "pourcentage": "Score de chaque type ramené entre 0 et 100 % selon son minimum et son maximum possibles (réponses toutes à −3 ou toutes à +3 selon le signe des poids).",
     "aile": "Score ajusté = pourcentage + 0,5 × pourcentage de la meilleure aile (le type voisin sur le cercle qui a le plus haut pourcentage). Un vrai type est soutenu par l'une de ses ailes.",
     "type_principal": "Le type au score ajusté le plus élevé.",
     "departage": "La question de départage (bloc « departage ») s'affiche si le 2e type est à 15 points ou moins du 1er, ou à 25 points ou moins quand les deux sont reliés par une flèche. Elle propose les types concernés (jusqu'à 3 : tous ceux à 15 points ou moins du 1er, ou les deux types reliés par la flèche). Le type choisi devient le type principal.",
     "fiabilite": "net : pas de départage et écart de plus de 25 points avec le 2e ; à confirmer : pas de départage mais écart de 25 points ou moins ; départagé : la personne a choisi via la question.",
-    "centre": "Moyenne des pourcentages des trois types de chaque centre : instinctif (8, 9, 1), émotionnel (2, 3, 4), mental (5, 6, 7). Affichage indicatif."
+    "centre": "Moyenne des pourcentages des trois types de chaque centre : instinctif (8, 9, 1), émotionnel (2, 3, 4), mental (5, 6, 7). Affichage indicatif.",
+    "echelle": "Chaque réponse est convertie en points avant d'être multipliée par les poids : pas du tout −3, quelques fois −1, neutre 0, souvent +1, toujours +3. Les réponses tranchées pèsent ainsi trois fois plus que les réponses nuancées."
   },
   "departage": {
     "quand": "Quand les premiers types sont trop proches ou reliés par une flèche (voir calcul.departage).",

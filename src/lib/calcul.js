@@ -12,6 +12,9 @@ const CENTRES = { instinctif: [8, 9, 1], emotionnel: [2, 3, 4], mental: [5, 6, 7
 const TYPES = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export function calculerType(questionnaire, reponses) {
+  // Points de chaque réponse (échelle −3, −1, 0, +1, +3) : les réponses tranchées pèsent plus.
+  const points = Object.fromEntries(questionnaire.echelle.map(e => [e.valeur, e.points]));
+  const pMin = Math.min(...Object.values(points)), pMax = Math.max(...Object.values(points));
   const scores = {}, min = {}, max = {};
   for (const t of TYPES) { scores[t] = 0; min[t] = 0; max[t] = 0; }
 
@@ -19,8 +22,8 @@ export function calculerType(questionnaire, reponses) {
     const v = reponses[q.id];
     if (!Number.isInteger(v) || v < 0 || v > 4) throw new Error(`Réponse manquante ou invalide pour la question ${q.id}`);
     for (const [t, w] of Object.entries(q.poids)) {
-      scores[t] += v * w;
-      if (w > 0) max[t] += 4 * w; else min[t] += 4 * w;
+      scores[t] += points[v] * w;
+      if (w > 0) { max[t] += pMax * w; min[t] += pMin * w; } else { max[t] += pMin * w; min[t] += pMax * w; }
     }
   }
 
