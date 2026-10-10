@@ -439,7 +439,7 @@
       "id": 35,
       "type": 2,
       "dimension": "centre",
-      "texte": "Je suis blessé·e quand je me sens inutile.",
+      "texte": "Je peux être vexé·e si je sens que je suis inutile.",
       "poids": {
         "2": 1
       }
@@ -475,7 +475,7 @@
       "id": 39,
       "type": 5,
       "dimension": "centre",
-      "texte": "Quand je m'inquiète, je me retire pour réfléchir.",
+      "texte": "Quand je suis inquiet·ète, je préfère être en retrait pour réfléchir.",
       "poids": {
         "5": 1
       }
@@ -502,7 +502,7 @@
       "id": 42,
       "type": 6,
       "dimension": "centre",
-      "texte": "Face à un problème, je pense d'abord à ce qui pourrait mal tourner.",
+      "texte": "Face à une situation, je pense d'abord à ce qui pourrait mal tourner.",
       "poids": {
         "6": 1
       }
@@ -520,7 +520,7 @@
       "id": 44,
       "type": 3,
       "dimension": "centre",
-      "texte": "Je suis blessé·e quand j'ai l'air d'échouer.",
+      "texte": "Ça me dérange de donner l'impression d'échouer.",
       "poids": {
         "3": 1
       }
