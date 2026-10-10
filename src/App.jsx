@@ -7,14 +7,26 @@ import { CREDITS } from './lib/credits.js';
 
 const QUESTIONS = questionnaire.questions;
 
+// Ordre des questions tiré au hasard (Fisher-Yates) à chaque lancement et à chaque nouveau test.
+function melanger(liste) {
+  const copie = [...liste];
+  for (let i = copie.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copie[i], copie[j]] = [copie[j], copie[i]];
+  }
+  return copie;
+}
+
 export default function App() {
   // Tout reste en mémoire dans l'onglet : rien n'est stocké ni envoyé.
   const [etape, setEtape] = useState('accueil');
   const [index, setIndex] = useState(0);
   const [reponses, setReponses] = useState({});
   const [typeChoisi, setTypeChoisi] = useState(null);
+  const [ordre, setOrdre] = useState(() => melanger(QUESTIONS));
 
   const recommencer = () => {
+    setOrdre(melanger(QUESTIONS));
     setReponses({});
     setIndex(0);
     setTypeChoisi(null);
@@ -22,7 +34,7 @@ export default function App() {
   };
 
   const repondre = (valeur) => {
-    const q = QUESTIONS[index];
+    const q = ordre[index];
     setReponses(r => ({ ...r, [q.id]: valeur }));
     if (index < QUESTIONS.length - 1) setIndex(index + 1);
     else setEtape('resultats');
@@ -40,8 +52,9 @@ export default function App() {
         {etape === 'accueil' && <Accueil onCommencer={() => setEtape('questions')} />}
         {etape === 'questions' && (
           <Question
+            q={ordre[index]}
             index={index}
-            valeur={reponses[QUESTIONS[index].id]}
+            valeur={reponses[ordre[index].id]}
             onRepondre={repondre}
             onPrecedent={() => (index === 0 ? setEtape('accueil') : setIndex(index - 1))}
           />
@@ -78,8 +91,7 @@ function Accueil({ onCommencer }) {
   );
 }
 
-function Question({ index, valeur, onRepondre, onPrecedent }) {
-  const q = QUESTIONS[index];
+function Question({ q, index, valeur, onRepondre, onPrecedent }) {
   const progression = Math.round((index / QUESTIONS.length) * 100);
   return (
     <section className="carte">
