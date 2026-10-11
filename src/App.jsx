@@ -134,7 +134,7 @@ function Resultats({ reponses, typeChoisi, onChoisirType, onRecommencer }) {
     try {
       // Chargé à la demande pour garder l'app légère.
       const { genererPdf } = await import('./lib/pdf.js');
-      genererPdf(profil);
+      genererPdf(profil, questionnaire, reponses);
     } finally {
       setPdfEnCours(false);
     }

@@ -7,7 +7,7 @@ const GRIS = [110, 110, 110];
 const FOND = [240, 230, 234];
 
 // Génère le récapitulatif dans le navigateur et lance le téléchargement.
-export function genererPdf(profil) {
+export function genererPdf(profil, questionnaire, reponses) {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
   const marge = 18;
   const largeur = 210 - 2 * marge;
@@ -70,6 +70,39 @@ export function genererPdf(profil) {
   y = 297 - 22;
   texte('Ce résultat est indicatif : seule une réflexion personnelle permet de confirmer son type.', { taille: 8, couleur: GRIS, espace: 0.5 });
   texte(CREDITS, { taille: 8, couleur: GRIS, espace: 0 });
+
+  // Récapitulatif des réponses, dans l'ordre d'origine des questions.
+  const libelles = Object.fromEntries(questionnaire.echelle.map(e => [e.valeur, e.libelle]));
+  const largeurReponse = 28;
+  const largeurQuestion = largeur - largeurReponse - 4;
+  const nouvellePage = (titre) => {
+    doc.addPage();
+    y = 22;
+    texte(titre, { taille: 13, gras: true, couleur: PRUNE, espace: 5 });
+  };
+  nouvellePage('Tes réponses');
+  const questions = [...questionnaire.questions].sort((a, b) => a.id - b.id);
+  questions.forEach((q, i) => {
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9.5);
+    const lignes = doc.splitTextToSize(`${q.id}. ${q.texte}`, largeurQuestion);
+    const hauteur = lignes.length * 4;
+    if (y + hauteur > 297 - 16) {
+      nouvellePage('Tes réponses (suite)');
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(9.5);
+    }
+    if (i % 2 === 0) {
+      doc.setFillColor(...FOND);
+      doc.rect(marge - 2, y - 3.6, largeur + 4, hauteur + 1.6, 'F');
+    }
+    doc.setTextColor(30, 30, 30);
+    doc.text(lignes, marge, y);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...PRUNE);
+    doc.text(libelles[reponses[q.id]] ?? '–', marge + largeur, y, { align: 'right' });
+    y += hauteur + 1.6;
+  });
 
   doc.save(`enneagramme-type-${type}.pdf`);
 }
